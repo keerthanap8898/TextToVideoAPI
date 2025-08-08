@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: videogen
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: videogen
+data:
+  REDIS_URL: redis://redis:6379/0
+  JOBS_STREAM: videogen:jobs
+  VIDEO_BASE_URL: /videos

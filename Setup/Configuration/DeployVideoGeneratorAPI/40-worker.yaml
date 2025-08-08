@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: video-worker
+  namespace: videogen
+spec:
+  replicas: 4                      # 4 pods x 2 GPUs = 8 GPUs
+  selector: { matchLabels: { app: video-worker } }
+  template:
+    metadata: { labels: { app: video-worker } }
+    spec:
+      containers:
+      - name: worker
+        image: YOUR_REG/video-worker:0.1
+        env:
+        - name: REDIS_URL
+          valueFrom: { configMapKeyRef: { name: api-config, key: REDIS_URL } }
+        - name: JOBS_STREAM
+          valueFrom: { configMapKeyRef: { name: api-config, key: JOBS_STREAM } }
+        - name: OUT_DIR
+          value: /data/videos
+        - name: USE_MINIO
+          value: "false"           # set "true" if you deploy MinIO
+        resources:
+          limits:
+            nvidia.com/gpu: 2
+        volumeMounts:
+        - { name: videos, mountPath: /data/videos }
+      volumes:
+      - name: videos
+        persistentVolumeClaim: { claimName: videos-pvc }

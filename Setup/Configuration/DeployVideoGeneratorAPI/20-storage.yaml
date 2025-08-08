@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: videos-pvc
+  namespace: videogen
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources: { requests: { storage: 200Gi } }
+  # Change to your cluster storage class (e.g., "gp3", "local-path", etc.)
+  storageClassName: gp3

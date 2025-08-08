@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: video-api
+  namespace: videogen
+spec:
+  selector: { app: video-api }
+  ports: [{ port: 80, targetPort: 8000 }]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: video-api
+  namespace: videogen
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: video-api } }
+  template:
+    metadata: { labels: { app: video-api } }
+    spec:
+      containers:
+      - name: api
+        image: YOUR_REG/video-api:0.1
+        env:
+        - name: REDIS_URL
+          valueFrom: { configMapKeyRef: { name: api-config, key: REDIS_URL } }
+        - name: VIDEO_BASE_URL
+          valueFrom: { configMapKeyRef: { name: api-config, key: VIDEO_BASE_URL } }
+        volumeMounts:
+        - { name: videos, mountPath: /data/videos }
+        ports: [{ containerPort: 8000 }]
+      volumes:
+      - name: videos
+        persistentVolumeClaim: { claimName: videos-pvc }
