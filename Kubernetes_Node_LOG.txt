@@ -78,4 +78,354 @@ dependenciesone.sh  dependenciestwo.sh  done
 └── [01;32mdependenciestwo.sh[0m
 
 0 directories, 2 files
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ tree
+[?2004l[01;34m.[0m
+├── [01;32mdependenciesone.sh[0m
+├── [01;32mdependenciestwo.sh[0m
+└── kubeconfig.yml
+
+0 directories, 3 files
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mexport KUBECONFIG=~/kubeconfig.yml[27m
+[7mkubectl get nodes[27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexport KUBECONFIG=~/kubeconfig.yml
+[5Pkubectl get 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[K[A]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[7mecho 'export KUBECONFIG=$HOME/kubeconfig.yml' >> ~/.bashrc[27m
+[7msource ~/.bashrc[27m[Aecho 'export KUBECONFIG=$HOME/kubeconfig.yml' >> ~/.bashrc
+source ~/.bashrc
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mkubectl get nodes[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl get nodes
+[?2004lE0808 10:28:59.995147 1854501 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:29:00.014984 1854501 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:29:00.037386 1854501 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:29:00.059016 1854501 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:29:00.082302 1854501 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+Unable to connect to the server: dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mkubectl --kubeconfig ~/kubeconfig.yml config get-contexts[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl --kubeconfig ~/kubeconfig.yml config get-contexts
+[?2004lCURRENT   NAME                                                                                              CLUSTER                                        AUTHINFO                                             NAMESPACE
+*         cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e-admin@cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e   cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e   cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e-admin   
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ nano ~/.
+./                         .cache/                    .ssh/
+../                        .config/                   .sudo_as_admin_successful
+.bash_history              .landscape/                .viminfo
+.bash_logout               .local/                    
+.bashrc                    .profile                   
+]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ nano ~/.bashrc
+[?2004l[?2004h[?1049h[22;0;0t[1;53r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[51;39H(B[0;7m[ Reading... ](B[m[51;37H(B[0;7m[ Read 118 lines ](B[m[H(B[0;7m  GNU nano 6.2                        /home/ubuntu/.bashrc                                 [1;90H(B[m[52d(B[0;7m^G(B[m Help[52;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[52;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[53d(B[0;7m^X(B[m Exit[53;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line[2d[36m# ~/.bashrc: executed by bash(1) for non-login shells.[3d# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)[4d# for examples[6d# If not running interactively, don't do anything[7d[32mcase[39m(B[m (B[0;1m[31m$-[39m(B[m [32min[8;5H[39m(B[m*i*[32m)[39m(B[m [32m;;[9;7H[39m(B[m*[32m)[39m(B[m [32mreturn;;[10desac[12d[36m# don't put duplicate lines or lines starting with space in the history.[13d# See bash(1) for more options[14d[39m(B[mHISTCONTROL[32m=[39m(B[mignoreboth[16d[36m# append to the history file, don't overwrite it[17d[39m(B[mshopt(B[0;1m[35m -s[39m(B[m histappend[19d[36m# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)[20d[39m(B[mHISTSIZE[32m=[39m(B[m1000[21dHISTFILESIZE[32m=[39m(B[m2000[23d[36m# check the window size after each command and, if necessary,[24d# update the values of LINES and COLUMNS.[25d[39m(B[mshopt(B[0;1m[35m -s[39m(B[m checkwinsize[27d[36m# If set, the pattern (B[0;1m[33m"**"(B[0m[36m used in a pathname expansion context will[28d# match all files and zero or more directories and subdirectories.[29d#shopt -s globstar[31d# make less more friendly for non-text input files, see lesspipe(1)[32d[32m[(B[0;1m[35m -x[39m(B[m /usr/bin/lesspipe [32m][39m(B[m [32m&&[39m(B[m [32meval[39m(B[m (B[0;1m[33m"$(SHELL=/bin/sh lesspipe)"[34d(B[0m[36m# set variable identifying the chroot you work in (used in the prompt below)[35d[32mif[39m(B[m [32m[(B[0;1m[35m -z[39m(B[m (B[0;1m[33m"${debian_chroot:-}"[39m(B[m [32m][39m(B[m [32m&&[39m(B[m [32m[(B[0;1m[35m -r[39m(B[m /etc/debian_chroot [32m];[39m(B[m [32mthen[36;5H[39m(B[mdebian_chroot[32m=$((B[0;1m[34mcat[39m(B[m /etc/debian_chroot[32m)[37dfi[39d[36m# set a fancy prompt (non-color, unless we know we (B[0;1m[33m"want"(B[0m[36m color)[40d[32mcase[39m(B[m (B[0;1m[33m"$TERM"[39m(B[m [32min[41;5H[39m(B[mxterm-color[32m|[39m(B[m*-256color[32m)[39m(B[m color_prompt[32m=[39m(B[myes[32m;;[42desac[44d[36m# uncomment for a colored prompt, if the terminal has the capability; turned[45d# off by default to not distract the user: the focus in a terminal window[46d# should be on the output of commands, not on the prompt[47d#force_color_prompt=yes[49d[32mif[39m(B[m [32m[(B[0;1m[35m -n[39m(B[m (B[0;1m[33m"$force_color_prompt"[39m(B[m [32m];[39m(B[m [32mthen[50;5Hif[39m(B[m [32m[(B[0;1m[35m -x[39m(B[m /usr/bin/tput [32m][39m(B[m [32m&&[39m(B[m tput setaf 1 [32m>&[39m(B[m/dev/null[32m;[39m(B[m [32mthen[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[13d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[51d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h[25d[?25l[?12l[?25h[26d[?25l[?12l[?25h[27d[?25l[?12l[?25h[28d[?25l[?12l[?25h[29d[?25l[?12l[?25h[30d[?25l[?12l[?25h[32d[?25l[?12l[?25h[33d[?25l[?12l[?25h[35d[?25l[?12l[?25h[36d[?25l[?12l[?25h[37d[?25l[?12l[?25h[38d[?25l[?12l[?25h[39d[?25l[?12l[?25h[40d[?25l[?12l[?25h[43d[?25l[?12l[?25h[44d[?25l[?12l[?25h[46d[?25l[?12l[?25h[48d[?25l[?12l[?25h[49d[?25l[?12l[?25h[2;51r[51;1H
+[1;53r[50;8H[36m[1K # We have color support; assume it's compliant with Ecma-48[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;8H[36m[1K # (ISO/IEC-6429). (Lack of such support is extremely rare, and such[50;8H[1K # a case would tend to support setf rather than setaf.)[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;9Hcolor_prompt[32m=[39m(B[myes[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5H[32melse[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;9Hcolor_prompt[32m=[50;5Hfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[50;1H[32mif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$color_prompt"[39m(B[m [32m=[39m(B[m yes [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5HPS1[32m=(B[0;1m[33m'${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\[39m(B[0;7m>[50;1H(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32melse[50d[39m(B[mPS1[32m=(B[0;1m[33m'${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H(B[0;1m[34munset[39m(B[m color_prompt force_color_prompt[?25l[?12l[?25h7[2;51r8[51d[3S[1;53r[49;1H[36m# If this is an xterm set the title to user@host:dir[50d[32mcase[39m(B[m (B[0;1m[33m"$TERM"[39m(B[m [32min[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1Hxterm*[32m|[39m(B[mrxvt*[32m)[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;5HPS1[32m=(B[0;1m[33m"\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"[50;5H(B[0m[32m;;[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H*[32m)[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5H[32m;;[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mesac[50d[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[36m# enable color support of ls and also add handy aliases[50d[32mif[39m(B[m [32m[(B[0;1m[35m -x[39m(B[m /usr/bin/dircolors [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;5Htest(B[0;1m[35m -r[39m(B[m ~/.dircolors [32m&&[39m(B[m [32meval[39m(B[m (B[0;1m[33m"$(dircolors -b ~/.dircolors)"[39m(B[m [32m||[39m(B[m [32meval[39m(B[m (B[0;1m[33m"$(dircolors -b)"[50;5H[39m(B[malias ls[32m=(B[0;1m[33m'ls --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;4H[36m #alias dir=(B[0;1m[33m'dir --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;4H[36m #alias vdir=(B[0;1m[33m'vdir --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;5Halias (B[0;1m[34mgrep(B[0m[32m=(B[0;1m[33m'grep --color=auto'[50;5H[39m(B[malias fgrep[32m=(B[0;1m[33m'fgrep --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5Halias egrep[32m=(B[0;1m[33m'egrep --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mfi[50d[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# colored GCC warnings and errors[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m#export GCC_COLORS=(B[0;1m[33m'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[36m# some more ls aliases[50d[39m(B[malias ll[32m=(B[0;1m[33m'ls -alF'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1Halias la[32m=(B[0;1m[33m'ls -A'[50d[39m(B[malias l[32m=(B[0;1m[33m'ls -CF'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[36m# Add an (B[0;1m[33m"alert"(B[0m[36m alias for long running commands.  Use like so:[50d#   sleep 10; alert[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1Halias alert[32m=(B[0;1m[33m'notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "[39m(B[0;7m>[50;1H(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# Alias definitions.[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# You may want to put all your additions into a separate file like[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[36m# ~/.bash_aliases, instead of adding them here directly.[50d# See /usr/share/doc/bash-doc/examples in the bash-doc package.[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mif[39m(B[m [32m[(B[0;1m[35m -f[39m(B[m ~/.bash_aliases [32m];[39m(B[m [32mthen[50;5H[39m(B[m. ~/.bash_aliases[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# enable programmable completion features (you don't need to enable[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[3S[1;53r[48;1H[36m# this, if it's already enabled in /etc/bash.bashrc and /etc/profile[49d# sources /etc/bash.bashrc).[50d[32mif[39m(B[m [32m![39m(B[m shopt -oq posix[32m;[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;3H[32mif[39m(B[m [32m[(B[0;1m[35m -f[39m(B[m /usr/share/bash-completion/bash_completion [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;5H. /usr/share/bash-completion/bash_completion[50;3H[32melif[39m(B[m [32m[(B[0;1m[35m -f[39m(B[m /etc/bash_completion [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5H. /etc/bash_completion[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;3H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mexport[39m(B[m KUBECONFIG[32m=(B[0;1m[31m$HOME[39m(B[m/kubeconfig.yml[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[46d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[40d[?25l[?12l[?25h[A[?25l[?12l[?25h[37d[?25l[?12l[?25h[35d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[35d[?25l[?12l[?25h[36d[?25l[?12l[?25h[38d[?25l[?12l[?25h[39d[?25l[?12l[?25h[41d[?25l[?12l[?25h[42d[?25l[?12l[?25h[43d[?25l[?12l[?25h[45d[?25l[?12l[?25h[46d[?25l[?12l[?25h[48d[?25l[?12l[?25h[49d[?25l[?12l[?25h[50d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[49;39H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;60H(B[0;7m*[90G(B[m[?12l[?25h[49;23H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[32m$[39m(B[m[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h~/kubeconfig.yml[49;20H[?25l[?12l[?25h[?25l[K[50d~/kubeconfig.yml[?12l[?25h[?25l[49;19H~/kubeconfig.yml[50d[K[49;19H[?12l[?25h[?25l[?12l[?25h~[?25l[?12l[?25h/[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[48;3H[?25l[?12l[?25h[47;5H[?25l[?12l[?25h[46;19H[?25l[?12l[?25h[44d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[36d[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[33;19H[?25l[?12l[?25h[31d[?25l[?12l[?25h[A[?25l[?12l[?25h[28d[?25l[?12l[?25h[26d[?25l[?12l[?25h[A[?25l[?12l[?25h[24;17H[?25l[?12l[?25h[A[?25l[?12l[?25h[22;19H[?25l[?12l[?25h[20d[?25l[?12l[?25h[18;19H[?25l[?12l[?25h[A[?25l[?12l[?25h[16;3H[?25l[?12l[?25h[15;19H[?25l[?12l[?25h[13d[?25l[?12l[?25h[A[?25l[?12l[?25h[9;19H[?25l[?12l[?25h[A[?25l[?12l[?25h[6d[?25l[?12l[?25h[A[?25l[?12l[?25h[4;5H[?25l[?12l[?25h[6;19H[?25l[?12l[?25h[7d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13;19H[?25l[?12l[?25h[14d[?25l[?12l[?25h[16;3H[?25l[?12l[?25h[17d[?25l[?12l[?25h[19;19H[?25l[?12l[?25h[20d[?25l[?12l[?25h[21;19H[?25l[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h[25d[?25l[?12l[?25h[26;19H[?25l[?12l[?25h[28d[?25l[?12l[?25h[29d[?25l[?12l[?25h[30;19H[?25l[?12l[?25h[31d[?25l[?12l[?25h[33d[?25l[?12l[?25h[34d[?25l[?12l[?25h[36;19H[?25l[?12l[?25h[38d[?25l[?12l[?25h[39;19H[?25l[?12l[?25h[40d[?25l[?12l[?25h[42d[?25l[?12l[?25h[43d[?25l[?12l[?25h[45d[?25l[?12l[?25h[46d[?25l[?12l[?25h[47;5H[?25l[?12l[?25h[48d[?25l[?12l[?25h[50d[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[51d(B[0;7mSave modified buffer?                                                                      [52;1H Y(B[m Yes[K[53d(B[0;7m N(B[m No  [53;16H (B[0;7m^C(B[m Cancel[K[51;23H[?12l[?25h[?25l[52d(B[0;7m^G(B[m Help[52;23H(B[0;7mM-D(B[m DOS Format[52;45H(B[0;7mM-A(B[m Append[52;67H(B[0;7mM-B(B[m Backup File[53d(B[0;7m^C(B[m Cancel[17G      (B[0;7mM-M(B[m Mac Format[53;45H(B[0;7mM-P(B[m Prepend[53;67H(B[0;7m^T(B[m Browse[51d(B[0;7mFile Name to Write: /home/ubuntu/.bashrc(B[m[?12l[?25h[?25l[1K (B[0;7m[ Writing... ](B[m[K[1;60H(B[0;7m [90G(B[m[51;37H(B[0;7m[ Wrote 118 lines ](B[m[J[53d[?12l[?25h[53;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ nano ~/.bashrckubectl --kubeconfig ~/kubeconfig.yml config get-contexts[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget nodes[K--kubeconfig ~/kubeconfig.yml config get-contexts[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnano ~/.bashrc[K
+[?2004l[?2004h[?1049h[22;0;0t[1;53r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[51;39H(B[0;7m[ Reading... ](B[m[51;37H(B[0;7m[ Read 118 lines ](B[m[H(B[0;7m  GNU nano 6.2                        /home/ubuntu/.bashrc                                 [1;90H(B[m[52d(B[0;7m^G(B[m Help[52;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[52;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[53d(B[0;7m^X(B[m Exit[53;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line[2d[36m# ~/.bashrc: executed by bash(1) for non-login shells.[3d# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)[4d# for examples[6d# If not running interactively, don't do anything[7d[32mcase[39m(B[m (B[0;1m[31m$-[39m(B[m [32min[8;5H[39m(B[m*i*[32m)[39m(B[m [32m;;[9;7H[39m(B[m*[32m)[39m(B[m [32mreturn;;[10desac[12d[36m# don't put duplicate lines or lines starting with space in the history.[13d# See bash(1) for more options[14d[39m(B[mHISTCONTROL[32m=[39m(B[mignoreboth[16d[36m# append to the history file, don't overwrite it[17d[39m(B[mshopt(B[0;1m[35m -s[39m(B[m histappend[19d[36m# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)[20d[39m(B[mHISTSIZE[32m=[39m(B[m1000[21dHISTFILESIZE[32m=[39m(B[m2000[23d[36m# check the window size after each command and, if necessary,[24d# update the values of LINES and COLUMNS.[25d[39m(B[mshopt(B[0;1m[35m -s[39m(B[m checkwinsize[27d[36m# If set, the pattern (B[0;1m[33m"**"(B[0m[36m used in a pathname expansion context will[28d# match all files and zero or more directories and subdirectories.[29d#shopt -s globstar[31d# make less more friendly for non-text input files, see lesspipe(1)[32d[32m[(B[0;1m[35m -x[39m(B[m /usr/bin/lesspipe [32m][39m(B[m [32m&&[39m(B[m [32meval[39m(B[m (B[0;1m[33m"$(SHELL=/bin/sh lesspipe)"[34d(B[0m[36m# set variable identifying the chroot you work in (used in the prompt below)[35d[32mif[39m(B[m [32m[(B[0;1m[35m -z[39m(B[m (B[0;1m[33m"${debian_chroot:-}"[39m(B[m [32m][39m(B[m [32m&&[39m(B[m [32m[(B[0;1m[35m -r[39m(B[m /etc/debian_chroot [32m];[39m(B[m [32mthen[36;5H[39m(B[mdebian_chroot[32m=$((B[0;1m[34mcat[39m(B[m /etc/debian_chroot[32m)[37dfi[39d[36m# set a fancy prompt (non-color, unless we know we (B[0;1m[33m"want"(B[0m[36m color)[40d[32mcase[39m(B[m (B[0;1m[33m"$TERM"[39m(B[m [32min[41;5H[39m(B[mxterm-color[32m|[39m(B[m*-256color[32m)[39m(B[m color_prompt[32m=[39m(B[myes[32m;;[42desac[44d[36m# uncomment for a colored prompt, if the terminal has the capability; turned[45d# off by default to not distract the user: the focus in a terminal window[46d# should be on the output of commands, not on the prompt[47d#force_color_prompt=yes[49d[32mif[39m(B[m [32m[(B[0;1m[35m -n[39m(B[m (B[0;1m[33m"$force_color_prompt"[39m(B[m [32m];[39m(B[m [32mthen[50;5Hif[39m(B[m [32m[(B[0;1m[35m -x[39m(B[m /usr/bin/tput [32m][39m(B[m [32m&&[39m(B[m tput setaf 1 [32m>&[39m(B[m/dev/null[32m;[39m(B[m [32mthen[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[19d[?25l[?12l[?25h[21d[?25l[51d[K[?12l[?25h[24d[?25l[?12l[?25h[25d[?25l[?12l[?25h[27d[?25l[?12l[?25h[28d[?25l[?12l[?25h[30d[?25l[?12l[?25h[31d[?25l[?12l[?25h[32d[?25l[?12l[?25h[34d[?25l[?12l[?25h[36d[?25l[?12l[?25h[37d[?25l[?12l[?25h[39d[?25l[?12l[?25h[40d[?25l[?12l[?25h[41d[?25l[?12l[?25h[42d[?25l[?12l[?25h[44d[?25l[?12l[?25h[45d[?25l[?12l[?25h[47d[?25l[?12l[?25h[49d[?25l[?12l[?25h[2;51r[51;1H
+[1;53r[50;8H[36m[1K # We have color support; assume it's compliant with Ecma-48[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;8H[36m[1K # (ISO/IEC-6429). (Lack of such support is extremely rare, and such[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;8H[36m[1K # a case would tend to support setf rather than setaf.)[50;9H[39m(B[mcolor_prompt[32m=[39m(B[myes[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5H[32melse[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;9Hcolor_prompt[32m=[50;5Hfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[50;1H[32mif[39m(B[m [32m[[39m(B[m (B[0;1m[33m"$color_prompt"[39m(B[m [32m=[39m(B[m yes [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5HPS1[32m=(B[0;1m[33m'${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\[39m(B[0;7m>[50;1H(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32melse[50d[39m(B[mPS1[32m=(B[0;1m[33m'${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H(B[0;1m[34munset[39m(B[m color_prompt force_color_prompt[50d[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# If this is an xterm set the title to user@host:dir[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mcase[39m(B[m (B[0;1m[33m"$TERM"[39m(B[m [32min[50d[39m(B[mxterm*[32m|[39m(B[mrxvt*[32m)[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5HPS1[32m=(B[0;1m[33m"\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5H[32m;;[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H*[32m)[50;5H;;[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mesac[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# enable color support of ls and also add handy aliases[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mif[39m(B[m [32m[(B[0;1m[35m -x[39m(B[m /usr/bin/dircolors [32m];[39m(B[m [32mthen[50;5H[39m(B[mtest(B[0;1m[35m -r[39m(B[m ~/.dircolors [32m&&[39m(B[m [32meval[39m(B[m (B[0;1m[33m"$(dircolors -b ~/.dircolors)"[39m(B[m [32m||[39m(B[m [32meval[39m(B[m (B[0;1m[33m"$(dircolors -b)"[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;5Halias ls[32m=(B[0;1m[33m'ls --color=auto'[50;4H(B[0m[36m #alias dir=(B[0;1m[33m'dir --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;4H[36m #alias vdir=(B[0;1m[33m'vdir --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[3S[1;53r[49;5Halias (B[0;1m[34mgrep(B[0m[32m=(B[0;1m[33m'grep --color=auto'[50;5H[39m(B[malias fgrep[32m=(B[0;1m[33m'fgrep --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5Halias egrep[32m=(B[0;1m[33m'egrep --color=auto'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mfi[50d[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# colored GCC warnings and errors[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m#export GCC_COLORS=(B[0;1m[33m'error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[50;1H[36m# some more ls aliases[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1Halias ll[32m=(B[0;1m[33m'ls -alF'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1Halias la[32m=(B[0;1m[33m'ls -A'[50d[39m(B[malias l[32m=(B[0;1m[33m'ls -CF'[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[50;1H[36m# Add an (B[0;1m[33m"alert"(B[0m[36m alias for long running commands.  Use like so:[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m#   sleep 10; alert[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1Halias alert[32m=(B[0;1m[33m'notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "[39m(B[0;7m>[50;1H(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[50;1H[36m# Alias definitions.[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[36m# You may want to put all your additions into a separate file like[50d# ~/.bash_aliases, instead of adding them here directly.[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# See /usr/share/doc/bash-doc/examples in the bash-doc package.[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[32mif[39m(B[m [32m[(B[0;1m[35m -f[39m(B[m ~/.bash_aliases [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;5H. ~/.bash_aliases[50d[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[50;1H[36m# enable programmable completion features (you don't need to enable[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[36m# this, if it's already enabled in /etc/bash.bashrc and /etc/profile[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[36m# sources /etc/bash.bashrc).[50d[32mif[39m(B[m [32m![39m(B[m shopt -oq posix[32m;[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;3H[32mif[39m(B[m [32m[(B[0;1m[35m -f[39m(B[m /usr/share/bash-completion/bash_completion [32m];[39m(B[m [32mthen[39m(B[m[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;5H. /usr/share/bash-completion/bash_completion[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;3H[32melif[39m(B[m [32m[(B[0;1m[35m -f[39m(B[m /etc/bash_completion [32m];[39m(B[m [32mthen[50;5H[39m(B[m. /etc/bash_completion[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;3H[32mfi[39m(B[m[?25l[?12l[?25h7[2;51r8[51d[2S[1;53r[49;1H[32mfi[50dexport[39m(B[m KUBECONFIG[32m=[39m(B[mkubeconfig.yml[?25l[?12l[?25h7[2;51r8[51d
+[1;53r[50;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[49;33H[?25l[52d[J[51;35H(B[0;7m[ Invoking linter... ](B[m[51;23H(B[0;7m[ Got 0 parsable lines from command: dash -n ](B[m[52d(B[0;7m^G(B[m Help[52;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[52;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[53d(B[0;7m^X(B[m Exit[53;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line[?12l[?25h[49;33H[?25l[52d[J[51;34H[1K (B[0;7m[ Invoking linter... ](B[m[K[51;23H(B[0;7m[ Got 0 parsable lines from command: dash -n ](B[m[52d(B[0;7m^G(B[m Help[52;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[52;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location[53d(B[0;7m^X(B[m Exit[53;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line[?12l[?25h[49;33H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;60H(B[0;7m*[90G(B[m[?12l[?25h[49;19H(B[0;1m[31m$kubeconfig[39m(B[m.yml[49;20H[?25l[?12l[?25h(B[0;1m[31mHkubeconfig[39m(B[m.yml[49;21H[?25l[?12l[?25h(B[0;1m[31mOkubeconfig[39m(B[m.yml[49;22H[?25l[?12l[?25h(B[0;1m[31mMkubeconfig[39m(B[m.yml[49;23H[?25l[?12l[?25h(B[0;1m[31mEkubeconfig[39m(B[m.yml[49;24H[?25l[51d[K[?12l[?25h[49;24H/kubeconfig.yml[49;25H[?25l[K[50dkubeconfig.yml[?12l[?25h[?25l[49;25Hkubeconfig.yml[50d[K[49;25H[?12l[?25h[?25l[?12l[?25h[?25l[51d(B[0;7mSave modified buffer?                                                                      [52;1H Y(B[m Yes[K[53d(B[0;7m N(B[m No  [53;16H (B[0;7m^C(B[m Cancel[K[51;23H[?12l[?25h[?25l[52d(B[0;7m^G(B[m Help[52;23H(B[0;7mM-D(B[m DOS Format[52;45H(B[0;7mM-A(B[m Append[52;67H(B[0;7mM-B(B[m Backup File[53d(B[0;7m^C(B[m Cancel[17G      (B[0;7mM-M(B[m Mac Format[53;45H(B[0;7mM-P(B[m Prepend[53;67H(B[0;7m^T(B[m Browse[51d(B[0;7mFile Name to Write: /home/ubuntu/.bashrc(B[m[?12l[?25h[?25l[1K (B[0;7m[ Writing... ](B[m[K[1;60H(B[0;7m [90G(B[m[51;37H(B[0;7m[ Wrote 118 lines ](B[m[J[53d[?12l[?25h[53;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ source ~/.bashrx[Kc
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ source ~/.bashrc[2Pnano[C[C[C[C[C[C[C[C[C[Ckubectl --kubeconfig ~/kubeconfig.yml config get-contexts
+[?2004lCURRENT   NAME                                                                                              CLUSTER                                        AUTHINFO                                             NAMESPACE
+*         cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e-admin@cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e   cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e   cluster-9e8ddaac-fba5-4a68-aa09-d81790252a3e-admin   
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ kubectl --kubeconfig ~/kubeconfig.yml config get-contexts[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csource ~/.bashrc[K[2Pnano[C[C[C[C[C[C[C[C[C[Ckubectl --kubeconfig ~/kubeconfig.yml config get-contexts[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget nodes[K
+[?2004lE0808 10:35:13.958943 1858023 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:35:13.982037 1858023 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:35:14.003977 1858023 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:35:14.027816 1858023 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:35:14.050027 1858023 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+Unable to connect to the server: dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mresolvectl status  [27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresolvectl status  
+[?2004l[?1h=[0;1;39mGlobal[0m[m
+       Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+resolv.conf mode: stub[m
+[m
+[0;1;39mLink 2 (eno8303)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 3 (eno8403)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 4 (enp27s0f0np0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 5 (enp27s0f1np1)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 6 (enp157s0f0np0)[0m[m
+    Current Scopes: DNS[m
+         Protocols: +DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+Current DNS Server: 8.8.8.8[m
+       DNS Servers: 8.8.8.8 8.8.4.4[m
+        DNS Domain: maas voltagepark.net[m
+[m
+[0;1;39mLink 7 (enp157s0f1np1)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 8 (ibp26s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 9 (ibp60s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 10 (ibp77s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 11 (ibp94s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 12 (ibp156s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 13 (ibp188s0)[0m[m
+[7mlines 1-52[27m[K[KCurrent Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 14 (ibp204s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 15 (ibp220s0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 18 (cilium_net)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 19 (cilium_host)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 20 (cilium_vxlan)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 22 (lxc_health)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 24 (lxc3f2b4ced1601)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 26 (lxc4c59a4f14673)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 28 (lxccb68c634134a)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 30 (lxc9c55a7435897)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 36 (lxc8ca8c44d9e12)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 38 (lxc5ec547d6f2ad)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 40 (lxcbe137a81da36)[0m[m
+[7mlines 53-104[27m[K[KCurrent Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 44 (lxc971c04749cd1)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 46 (lxcbb49cecbe970)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 48 (lxce0dafabbd421)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 53 (lxcc40e52552be0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 55 (lxc93179ff99d88)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 57 (lxc567dab7fa3ac)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 59 (lxcd54bf42806ad)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 62 (lxc845255870cb0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 64 (lxc475a06b99f49)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 67 (wg0)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[m
+[0;1;39mLink 69 (lxc90ac3cc4b57a)[0m[m
+Current Scopes: none[m
+     Protocols: -DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
+[7mlines 99-150/150 (END)[27m[K[K[K[7mlines 99-150/150 (END)[27m[K[K[K[7mlines 99-150/150 (END)[27m[K[K[K[7mlines 99-150/150 (END)[27m[K[K[K[7mlines 99-150/150 (END)[27m[K[K [KESCESC[K^J^J[K[7mlines 99-150/150 (END)[27m[K[K[K[7mlines 99-150/150 (END)[27m[K[K [KESCESC[Kqq[K[7mlines 99-150/150 (END)[27m[K[K[?1l>[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mgetent hosts google.com[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgetent hosts google.com
+[?2004l2607:f8b0:4023:1004::71 google.com
+2607:f8b0:4023:1004::65 google.com
+2607:f8b0:4023:1004::66 google.com
+2607:f8b0:4023:1004::8a google.com
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ getent hosts google.com[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Presolvectl status  [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Pkubectl get nodes
+[?2004lE0808 10:37:13.788267 1859247 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:37:13.819925 1859247 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:37:13.839571 1859247 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:37:13.861810 1859247 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:37:13.883255 1859247 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+Unable to connect to the server: dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7msystemd-resolve --status[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csystemd-resolve --status
+[?2004lsystemd-resolve: command not found
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7msudo bash -c 'cat >/etc/systemd/resolved.conf <<EOF[27m
+[7m[Resolve][27m
+[7mDNS=8.8.8.8 1.1.1.1[27m
+[7mFallbackDNS=8.8.4.4 1.0.0.1[27m
+[7m#Domains=[27m
+[7m#DNSSEC=no[27m
+[7m#LLMNR=no[27m
+[7mEOF'[27m[A[A[A[A[A[A[A]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ sudo bash -c 'cat >/etc/systemd/resolved.conf <<EOF
+[Resolve]
+DNS=8.8.8.8 1.1.1.1
+FallbackDNS=8.8.4.4 1.0.0.1
+#Domains=
+#DNSSEC=no
+#LLMNR=no
+EOF'
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ ls -a
+[?2004l[0m[01;34m.[0m              .bashrc     .lesshst  .sudo_as_admin_successful  kubeconfig.yml
+[01;34m..[0m             [01;34m.cache[0m      [01;34m.local[0m    .viminfo
+.bash_history  [01;34m.config[0m     .profile  [01;32mdependenciesone.sh[0m
+.bash_logout   [01;34m.landscape[0m  [01;34m.ssh[0m      [01;32mdependenciestwo.sh[0m
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mreadlink -f /etc/resolv.conf[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Creadlink -f /etc/resolv.conf
+[?2004l/run/systemd/resolve/stub-resolv.conf
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7msudo systemctl restart systemd-resolved[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl restart systemd-resolved
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7msudo systemctl status --no-pager systemd-resolved[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl status --no-pager systemd-resolved
+[?2004l[0;1;32m●[0m systemd-resolved.service - Network Name Resolution
+     Loaded: loaded (]8;;file://g227/lib/systemd/system/systemd-resolved.service/lib/systemd/system/systemd-resolved.service]8;;; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Fri 2025-08-08 10:40:31 UTC; 8s ago
+       Docs: ]8;;man:systemd-resolved.service(8)man:systemd-resolved.service(8)]8;;
+             ]8;;man:org.freedesktop.resolve1(5)man:org.freedesktop.resolve1(5)]8;;
+             ]8;;https://www.freedesktop.org/wiki/Software/systemd/writing-network-configuration-managershttps://www.freedesktop.org/wiki/Software/systemd/writing-network-configuration-managers]8;;
+             ]8;;https://www.freedesktop.org/wiki/Software/systemd/writing-resolver-clientshttps://www.freedesktop.org/wiki/Software/systemd/writing-resolver-clients]8;;
+   Main PID: 1860850 (systemd-resolve)
+     Status: "Processing requests..."
+      Tasks: 1 (limit: 629145)
+     Memory: 6.4M
+        CPU: 321ms
+     CGroup: /system.slice/systemd-resolved.service
+             └─1860850 /lib/systemd/systemd-resolved
+
+Aug 08 10:40:31 g227 systemd[1]: Starting Network Name Resolution...
+Aug 08 10:40:31 g227 systemd-resolved[1860850]: Positive Trust Anchors:
+Aug 08 10:40:31 g227 systemd-resolved[1860850]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c…ec8d
+Aug 08 10:40:31 g227 systemd-resolved[1860850]: Negative trust anchors: home.arpa 10.in-ad…
+Aug 08 10:40:31 g227 systemd-resolved[1860850]: Using system hostname 'g227'.
+Aug 08 10:40:31 g227 systemd[1]: Started Network Name Resolution.
+Hint: Some lines were ellipsized, use -l to show in full.
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ sudo systemctl status --no-pager systemd-resolved[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Prestart[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Preadlink -f /etc/resolv.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -a[Ksudo bash -c 'cat >/etc/systemd/resolved.conf <<EOF
+[Resolve]
+DNS=8.8.8.8 1.1.1.1
+FallbackDNS=8.8.4.4 1.0.0.1
+#Domains=
+#DNSSEC=no
+#LLMNR=no
+EOF'[A[A[A[A[A[A[A]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [C[27Pystemd-resolve --status
+[K
+[K
+[K
+[K
+[K
+[K
+[K[A[A[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pkubectl get nodes
+[?2004lE0808 10:41:01.575521 1861150 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:41:01.604585 1861150 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:41:01.625074 1861150 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:41:01.659036 1861150 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:41:01.681055 1861150 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+Unable to connect to the server: dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mdig +short jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.a[27m[7mm[27m[7mazonaws.com [27m
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdig +short jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com
+[A
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7mecho "<ELB_IP> jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west[27m[7m-[27m[7m2.amazonaws.com" | sudo tee -a /etc/hosts [27m
+[7mkubectl --kubeconfig ~/kubeconfig.yml get nodes[27m
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cecho "<ELB_IP> jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com" | sudo tee -a /etc/hosts
+kubectl --kubeconfig ~/kubeconfig.yml get nodes
+[A
+[?2004l<ELB_IP> jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com
+E0808 10:43:55.294490 1862559 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:43:55.316399 1862559 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:43:55.338566 1862559 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:43:55.362472 1862559 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+E0808 10:43:55.383737 1862559 memcache.go:265] "Unhandled Error" err="couldn't get current server API group list: Get \"https://jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com:6443/api?timeout=32s\": dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host"
+Unable to connect to the server: dial tcp: lookup jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com on 127.0.0.53:53: no such host
 [?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ 

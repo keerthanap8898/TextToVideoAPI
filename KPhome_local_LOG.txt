@@ -65,4 +65,84 @@ Script started on Fri Aug  8 03:18:43 2025
 16 directories, 9 files
 [1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit log[?2004l
 fatal: your current branch 'main' does not have any commits yet
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mgit add[27m[27mg[27mi[27mt[27m [27ma[27md[27md[?2004l
+Nothing specified, nothing added.
+[33mhint: Maybe you wanted to say 'git add .'?[m
+[33mhint: Turn this message off by running[m
+[33mhint: "git config advice.addEmptyPathspec false"[m
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hgit add .[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit commit "initial      nit"-"init"m"init" "init"[?2004l
+[main (root-commit) d08c85e] init
+ 9 files changed, 169 insertions(+)
+ create mode 100644 KPhome_local_LOG.txt
+ create mode 100644 Kubernetes_Node_LOG.txt
+ create mode 100644 Readme.txt
+ create mode 100644 Resources/Documentation/Constraints.txt
+ create mode 100644 Resources/Documentation/Design.doc
+ create mode 100644 Resources/Documentation/Kubectl Reference Docs.pdf
+ create mode 100644 Resources/Documentation/Voltage Park - Home Assignment Single Node (July2025).pdf
+ create mode 100644 Setup/Configuration/APItemplate.yml
+ create mode 100644 Setup/Configuration/kubeconfig.yml
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mgit add[27m[27mg[27mi[27mt[27m [27m [27m [27m    [7mscp Configuration/kubeconfig.yml ubuntu@147.1[7m8[7m5.41.100:~/kubeconfig.yml[27m[K[A[20C[27ms[27mc[27mp[27m [27mC[27mo[27mn[27mf[27mi[27mg[27mu[27mr[27ma[27mt[27mi[27mo[27mn[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27my[27mm[27ml[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m18[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[27m:[27m~[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27my[27mm[27ml[?2004l
+scp: stat local "Configuration/kubeconfig.yml": No such file or directory
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hscp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[K[16D[A[76C[29DSConfiguration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[24CeConfiguration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[24CtConfiguration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[24CuConfiguration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[24CpConfiguration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[24C/Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[24C[?2004l[1B
+kubeconfig.yml                                             0%    0     0.0KB/s   --:-- ETAkubeconfig.yml                                           100% 5909    83.1KB/s   00:00    
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mdig +short jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3[7m9[7m98f32f3d8e9718.elb.us-west-2.amazonaws.com[27m[K
+[K[A[A[46C[27md[27mi[27mg[27m [27m+[27ms[27mh[27mo[27mr[27mt[27m [27mj[27ms[27mt[27mx[27m2[27mh[27mg[27mb[27mc[27mo[27mc[27mr[27me[27m1[27mf[27mi[27mj[27ml[27mx[27ms[27mn[27mr[27mb[27mx[27mr[27m4[27mn[27mv[27m-[27mk[27m8[27ms[27m-[27m39[27m9[27m8[27mf[27m3[27m2[27mf[27m3[27md[27m8[27me[27m9[27m7[27m1[27m8[27m.[27me[27ml[27mb[27m.[27mu[27ms[27m-[27mw[27me[27ms[27mt[27m-[27m2[27m.[27ma[27mm[27ma[27mz[27mo[27mn[27ma[27mw[27ms[27m.[27mc[27mo[27mm[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mkubectl get nodes[27m[17D[27mk[27mu[27mb[27me[27mc[27mt[27ml[27m [27mg[27me[27mt[27m [27mn[27mo[27md[27me[27ms[?2004l
+zsh: command not found: kubectl
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mELB=jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f[7m3[7md8e9718.elb.us-west-2.amazonaws.com[27m[K
+[7mdig +short A "$ELB"[27m[K
+[7m# If blank, also try an explicit resolver:[27m[K
+[7mdig +short A "$ELB" @1.1.1.1[27m[K
+[K[5A[46C[27mE[27mL[27mB[27m=[27mj[27ms[27mt[27mx[27m2[27mh[27mg[27mb[27mc[27mo[27mc[27mr[27me[27m1[27mf[27mi[27mj[27ml[27mx[27ms[27mn[27mr[27mb[27mx[27mr[27m4[27mn[27mv[27m-[27mk[27m8[27ms[27m-[27m3[27m9[27m9[27m8[27mf[27m3[27m2[27mf3[27md[27m8[27me[27m9[27m7[27m1[27m8[27m.[27me[27ml[27mb[27m.[27mu[27ms[27m-[27mw[27me[27ms[27mt[27m-[27m2[27m.[27ma[27mm[27ma[27mz[27mo[27mn[27ma[27mw[27ms[27m.[27mc[27mo[27mm[1B[27md[27mi[27mg[27m [27m+[27ms[27mh[27mo[27mr[27mt[27m [27mA[27m [27m"[27m$[27mE[27mL[27mB[27m"[1B[27m#[27m [27mI[27mf[27m [27mb[27ml[27ma[27mn[27mk[27m,[27m [27ma[27ml[27ms[27mo[27m [27mt[27mr[27my[27m [27ma[27mn[27m [27me[27mx[27mp[27ml[27mi[27mc[27mi[27mt[27m [27mr[27me[27ms[27mo[27ml[27mv[27me[27mr[27m:[1B[27md[27mi[27mg[27m [27m+[27ms[27mh[27mo[27mr[27mt[27m [27mA[27m [27m"[27m$[27mE[27mL[27mB[27m"[27m [27m@[K[1B[K[A[21C               [K[A[33C         [1B[K[A[33C[9D        [8D                 [K[K[A[19C[?2004l[1B[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mdig +short A "$ELB" @1.1.1.1[27m[28D[27md[27mi[27mg[27m [27m+[27ms[27mh[27mo[27mr[27mt[27m [27mA[27m [27m"[27m$[27mE[27mL[27mB[27m"[27m [27m@[27m1[27m.[27m1[27m.[27m1[27m.[27m1[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hccd ~[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro ~ % [K[?2004hcd ~dig +short A "$ELB" @1.1.1.1[28DELB=jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com[K
+dig +short A "$ELB"[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro ~ % [K[?2004hELB=jstx2hgbcocre1fijlxsnrbxr4nv-k8s-3998f32f3d8e9718.elb.us-west-2.amazonaws.com[K
+dig +short A "$ELB"[K[A[A[17Ccd ~[K[1B[K[1B[K[A[A[40Cdig +short A "$ELB" @1.1.1.1[?2004l[1B[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro ~ % [K[?2004h[7mgit remote add origin https://github.com/keerthanap8898[7m/[7mVoltagePark_Assignment_Keerthana.git[27m[K
+[7mgit branch -M main[27m[K
+[7mgit push -u origin main[27m[K[3A[13C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ma[27md[27md[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m/[27mk[27me[27me[27mr[27mt[27mh[27ma[27mn[27ma[27mp[27m8[27m8[27m9[27m8/[27mV[27mo[27ml[27mt[27ma[27mg[27me[27mP[27ma[27mr[27mk[27m_[27mA[27ms[27ms[27mi[27mg[27mn[27mm[27me[27mn[27mt[27m_[27mK[27me[27me[27mr[27mt[27mh[27ma[27mn[27ma[27m.[27mg[27mi[27mt[1B[27mg[27mi[27mt[27m [27mb[27mr[27ma[27mn[27mc[27mh[27m [27m-[27mM[27m [27mm[27ma[27mi[27mn[1B[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[?2004l
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro ~ % [K[?2004hccd V workspace[1m/[0m[0m/V I 
+[Jinterview/    projects/     speedcoding/[A[0m[27m[24m[36Ccd workspace/[Kinterview[1m/[0m[0m/VoltagePark[1m/[0m[0m [?2004l
+[J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hcd workspace/interview/VoltagePark[34Dgit remote add origin https://github.com/keerthanap8898/VoltagePark_Assignment_Keerthana.git[K
+git branch -M main[K
+git push -u origin main[K[?2004l
+Enumerating objects: 13, done.
+Counting objects:   7% (1/13)Counting objects:  15% (2/13)Counting objects:  23% (3/13)Counting objects:  30% (4/13)Counting objects:  38% (5/13)Counting objects:  46% (6/13)Counting objects:  53% (7/13)Counting objects:  61% (8/13)Counting objects:  69% (9/13)Counting objects:  76% (10/13)Counting objects:  84% (11/13)Counting objects:  92% (12/13)Counting objects: 100% (13/13)Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects:  11% (1/9)Compressing objects:  22% (2/9)Compressing objects:  33% (3/9)Compressing objects:  44% (4/9)Compressing objects:  55% (5/9)Compressing objects:  66% (6/9)Compressing objects:  77% (7/9)Compressing objects:  88% (8/9)Compressing objects: 100% (9/9)Compressing objects: 100% (9/9), done.
+Writing objects:   7% (1/13)Writing objects:  15% (2/13)Writing objects:  23% (3/13)Writing objects:  30% (4/13)Writing objects:  38% (5/13)Writing objects:  46% (6/13)Writing objects:  53% (7/13)Writing objects:  61% (8/13)Writing objects:  69% (9/13)Writing objects:  76% (10/13)Writing objects:  84% (11/13)Writing objects:  92% (12/13)Writing objects: 100% (13/13)Writing objects: 100% (13/13), 1.09 MiB | 3.62 MiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/keerthanap8898/VoltagePark_Assignment_Keerthana.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h. mmv [7mScreenshot 2025-08-08 at 4.11.39 AM[27m[35D[27mS[27mc[27mr[27me[27me[27mn[27ms[27mh[27mo[27mt[27m [27m2[27m0[27m2[27m5[27m-[27m0[27m8[27m-[27m0[27m8[27m [27ma[27mt[27m [27m4[27m.[27m1[27m1[27m.[27m3[27m9[27m [27mA[27mM   *4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D4.11.39* [9D*4.11.39*[8D Scree*4.11.39*[14D*Scree*4.11.39*[14D[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[1C[15D~*Scree*4.11.39*[15D/*Scree*4.11.39*[15DD*Scree*4.11.39*[15D *Scree*4.11.39*[15De *Scree*4.11.39*[16Ds *Scree*4.11.39*[16Dktop[1m/[0m *Scree*4.11.39*[16D[P[16C [16D[P[15C [16D/*Scree*4.11.39*[15D[15C[25D/Users/kpurusho/Desktop/Screenshot\ 2025-08-08\ at\ 4.11.39 AM.png[K[1CR
+[JREADME.md   Resources/[A[A[0m[27m[24m[46Cmv  /Users/kpurusho/Desktop/Screenshot\ 2025-08-08\ at\ 4.11.39 AM.png R[KEADME.md[8Desources[1m/[0m[9DEADME.md[0m [8Desources[1m/[0m[0m                               0 [K[A[90C[K[1B[K[A[90C    [1B[J[A[85C 202[1B[J[JScreenshot\ 2023-04-21\ at\ 3.38.56\ PM.png  Screenshot\ 2025-05-06\ at\ 8.33.49 AM.png
+Screenshot\ 2024-10-19\ at\ 2.52.03\ AM.png  Screenshot\ 2025-05-27\ at\ 5.01.35 PM.png
+Screenshot\ 2025-02-20\ at\ 10.06.06 PM.png  Screenshot\ 2025-06-24\ at\ 7.05.00 AM.png
+Screenshot\ 2025-02-27\ at\ 10.50.32 AM.png  Screenshot\ 2025-06-30\ at\ 8.45.56 AM.png
+Screenshot\ 2025-04-07\ at\ 11.54.31 AM.png  Screenshot\ 2025-07-07\ at\ 7.28.24 PM.png
+Screenshot\ 2025-04-17\ at\ 8.53.33 PM.png   Screenshot\ 2025-07-08\ at\ 12.03.58 AM.png
+Screenshot\ 2025-04-17\ at\ 8.53.41 PM.png   Screenshot\ 2025-07-08\ at\ 8.35.01 PM.png
+Screenshot\ 2025-04-17\ at\ 9.49.43 PM.png   Screenshot\ 2025-07-08\ at\ 8.35.48 PM.png
+Screenshot\ 2025-04-18\ at\ 11.06.13 AM.png  Screenshot\ 2025-07-15\ at\ 7.27.30 AM.png
+Screenshot\ 2025-04-22\ at\ 6.10.06 PM.png   Screenshot\ 2025-07-15\ at\ 7.28.14 AM.png
+Screenshot\ 2025-04-25\ at\ 12.22.47 AM.png  Screenshot\ 2025-07-15\ at\ 7.28.22 AM.png
+Screenshot\ 2025-04-28\ at\ 8.59.49 PM.png   Screenshot\ 2025-07-15\ at\ 7.28.51 AM.png
+Screenshot\ 2025-05-05\ at\ 7.11.19 PM.png   Screenshot\ 2025-07-15\ at\ 7.37.47 AM.png
+Screenshot\ 2025-05-05\ at\ 7.21.51 PM.png   Screenshot\ 2025-08-08\ at\ 12.05.32 AM.png
+Screenshot\ 2025-05-05\ at\ 8.21.16 PM.png   Screenshot\ 2025-08-08\ at\ 2.30.01 AM.png
+Screenshot\ 2025-05-05\ at\ 8.21.59 PM.png   Screenshot\ 2025-08-08\ at\ 4.11.39 AM.png
+Screenshot\ 2025-05-06\ at\ 1.22.51 PM.png   [17A[0m[27m[24m[46Cmv  /Users/kpurusho/Desktop/Screenshot\ 202[K5
+[J[A[90C-0[K08-08\ at\ 
+[J[JScreenshot\ 2025-08-08\ at\ 12.05.32 AM.png  Screenshot\ 2025-08-08\ at\ 4.11.39 AM.png
+Screenshot\ 2025-08-08\ at\ 2.30.01 AM.png   [3A[0m[27m[24m[46Cmv  /Users/kpurusho/Desktop/Screenshot\ 2025-08-08\ at\[K[1C
+[J[A[11C[A[35Cgit remote add origin https://github.com/keerthanap8898/VoltagePark_Assignment_Keerthana.git
+git branch -M main[K
+git push -u origin main[K[K       [A[A[A[46C[14Dcd workspace/interview/VoltagePark[K[1B[K[1B[K[1B[K[3A[80C[31D                               [31D  [?2004l[1B[J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hmmv ~/Desktop[1m/[0m[0m/Scree*4.11.39* Resources[1m/[0m[0m/Other[1m/[0m[0m/. [K[A[90C[K[1B[K[A[90C                 [23D                       [23D  [?2004l[1B[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hmmv ~/Desktop[1m/[0m[0m/Scren *4.11.* Resources[1m/[0m[0m/Other[1m/[0m[0m [?2004l
 [1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h
