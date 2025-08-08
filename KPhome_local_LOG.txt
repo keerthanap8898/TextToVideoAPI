@@ -1,0 +1,68 @@
+Script started on Fri Aug  8 03:00:24 2025
+[1m[7m%[27m[1m[0m                                                                            [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004httree[?2004l
+.
+├── KPhome_local_LOG.txt
+├── Readme.txt
+├── Resources
+│   ├── Documentation
+│   │   ├── Constraints.txt
+│   │   ├── Design.doc
+│   │   ├── Kubectl Reference Docs.pdf
+│   │   └── Voltage Park - Home Assignment Single Node (July2025).pdf
+│   └── VideoGenerator API TEST data
+├── Setup
+│   ├── Configuration
+│   │   ├── APItemplate.yml
+│   │   └── kubeconfig.yml
+│   └── DeployVideoGeneratorAPI
+├── VideoGenerator_API
+│   ├── back-end
+│   └── front-end
+├── VideoGenerator_Telemetry
+└── VideoGenerator_TEST
+    ├── IntegrationTests
+    ├── RegressionTests
+    ├── SanityTests
+    └── UnitTests
+
+16 directories, 8 files
+[1m[7m%[27m[1m[0m                                                                            [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004htreecd ~/Desktop/BloomTasks/dist
+./main.app/Contents/MacOS/main[K[A[16C[1B[16D[A[16Cpython3 setup.py py2app     [1B[K[A[69C[23Dcd ~/Desktop/BloomTasks/dist[1B./main.app/Contents/MacOS/main[K[A[16Ctree                        [1B[K[A[50C    ggit log' [?2004l[1Bfatal: your current branch 'main' does not have any commits yet
+[1m[7m%[27m[1m[0m                                                                            [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mscp Configuration/kubeconfig.y[7mm[7ml ubuntu@147.185.41.100:~/kubeconfig.yml[27m[K[A[5C[27ms[27mc[27mp[27m [27mC[27mo[27mn[27mf[27mi[27mg[27mu[27mr[27ma[27mt[27mi[27mo[27mn[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27mym[27ml[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[27m:[27m~[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27my[27mm[27ml[A[45Cgit log[K[1B[K[A[53Cscp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[K[A[5Cgit log[K[1B[K[A[53C    g  scp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[K[16D                [16D[15D               [15D       [A[47C[K[1B[K[A[50C   [?2004l[1B[1m[7m%[27m[1m[0m                                                                            [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h
+bck-i-search: _[K[A[31Ccd ~/Desktop/BloomTasks/dist[1B./main.app/Contents/MacO[4mS[24m/main
+bck-i-search: s_[K[A[8C[A[25C.v[4ms[4mc[24mode/                 [1Bbck-i-search: sc_       [24m      [1B[K[A[A[51C[24ms[24mc[1Bfailing bck-i-search: scp_[A[25C[1B[26D=_[A[24C[1B[26D_ [A[24C[4ms[4mc[24m[1B[8P[16C_         [A[25C~/[24mD[24mesktop/BloomTasks/dist[1B./main.app/Contents/MacO[4mS[24m/main[1Bbck-i-search: s_[K[A[8C[A[22C                            [1Bbck-i-search: _         [24m      [1B[K[A[A[46C[1Bfailing bck-i-search: scp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml_[K[A[A[28C[1B[8P[14C_[K[1B[K[A[A[46C[1B[K[A[46C[7mscp Configuration/kubeconfig.y[7mm[7ml ubuntu@147.185.41.100:~/kubeconfig.yml[27m[K[A[5C[27ms[27mc[27mp[27m [27mC[27mo[27mn[27mf[27mi[27mg[27mu[27mr[27ma[27mt[27mi[27mo[27mn[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27mym[27ml[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[27m:[27m~[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27my[27mm[27ml[14D[15D[A[47CSp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[7Cep Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[7Ctp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[7Cup Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[7C[1Cp Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[7C/p Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[A[7C[?2004l[2Bzsh: no such file or directory: scSetup/p
+[1m[7m%[27m[1m[0m                                                                            [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mscp Configuration/kubeconfig.y[7mm[7ml ubuntu@147.185.41.100:~/kubeconfig.yml[27m[K[A[5C[27ms[27mc[27mp[27m [27mC[27mo[27mn[27mf[27mi[27mg[27mu[27mr[27ma[27mt[27mi[27mo[27mn[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27mym[27ml[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[27m:[27m~[27m/[27mk[27mu[27mb[27me[27mc[27mo[27mn[27mf[27mi[27mg[27m.[27my[27mm[27ml[1C[16D                [16D[15D               [15D       [A[47C[K[1B[K[A[50C   scSetup/p Configuration/kubeconfig.yml ubuntu@147.185.41.100:~/kubeconfig.yml[K[A[K[1B[K[A[46C[?2004l[1B[1m[7m%[27m[1m[0m                                                                            [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004heexit[?2004l
+
+Script done on Fri Aug  8 03:14:19 2025
+Script started on Fri Aug  8 03:18:43 2025
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mssh ubuntu@147.185.41.100[27m[25D[27ms[27ms[27mh[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0==[16D                [16D          ttree[?2004l
+.
+├── KPhome_local_LOG.txt
+├── Kubernetes_Node_LOG.txt
+├── Readme.txt
+├── Resources
+│   ├── Documentation
+│   │   ├── Constraints.txt
+│   │   ├── Design.doc
+│   │   ├── Kubectl Reference Docs.pdf
+│   │   └── Voltage Park - Home Assignment Single Node (July2025).pdf
+│   └── VideoGenerator API TEST data
+├── Setup
+│   ├── Configuration
+│   │   ├── APItemplate.yml
+│   │   └── kubeconfig.yml
+│   └── DeployVideoGeneratorAPI
+├── VideoGenerator_API
+│   ├── back-end
+│   └── front-end
+├── VideoGenerator_Telemetry
+└── VideoGenerator_TEST
+    ├── IntegrationTests
+    ├── RegressionTests
+    ├── SanityTests
+    └── UnitTests
+
+16 directories, 9 files
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit log[?2004l
+fatal: your current branch 'main' does not have any commits yet
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h

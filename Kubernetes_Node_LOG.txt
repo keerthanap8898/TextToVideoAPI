@@ -1,0 +1,81 @@
+Script started on Fri Aug  8 03:21:45 2025
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mssh ubuntu@147.185.41.100[27m[25D[27ms[27ms[27mh[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[?2004l
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Aug  8 10:21:59 UTC 2025
+
+  System load:  0.16               Temperature:                    46.0 C
+  Usage of /:   7.9% of 438.49GB   Processes:                      2529
+  Memory usage: 1%                 Users logged in:                0
+  Swap usage:   0%                 IPv4 address for enp157s0f0np0: 10.15.27.25
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+26 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+10 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Fri Aug  8 08:13:21 2025 from 216.243.41.115
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ landscape-sysinfo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kexit
+[?2004llogout
+Connection to 147.185.41.100 closed.
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hssh ubuntu@147.185.41.100[?2004l
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Aug  8 10:21:59 UTC 2025
+
+  System load:  0.16               Temperature:                    46.0 C
+  Usage of /:   7.9% of 438.49GB   Processes:                      2529
+  Memory usage: 1%                 Users logged in:                0
+  Swap usage:   0%                 IPv4 address for enp157s0f0np0: 10.15.27.25
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+26 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+10 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.3 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Fri Aug  8 10:22:00 2025 from 216.243.41.115
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ ls
+[?2004lKubernetes_Node_LOG.txt  [0m[01;32mdependenciesone.sh[0m  [01;32mdependenciestwo.sh[0m  done
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ rm -rf Kubernetes_Node_LOG.txt 
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ rm -rf d
+dependenciesone.sh  dependenciestwo.sh  done                
+]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ rm -rf done[K[K[K[K[K[K[K[K[K[K[Krm -rf Kubernetes_Node_LOG.txt [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Krm done
+[?2004l[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ tree
+[?2004l[01;34m.[0m
+├── [01;32mdependenciesone.sh[0m
+└── [01;32mdependenciestwo.sh[0m
+
+0 directories, 2 files
+[?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ 
