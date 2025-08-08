@@ -145,4 +145,43 @@ Screenshot\ 2025-08-08\ at\ 2.30.01 AM.png   [3A[0m[27m[24m[46Cmv  /User
 [J[A[11C[A[35Cgit remote add origin https://github.com/keerthanap8898/VoltagePark_Assignment_Keerthana.git
 git branch -M main[K
 git push -u origin main[K[K       [A[A[A[46C[14Dcd workspace/interview/VoltagePark[K[1B[K[1B[K[1B[K[3A[80C[31D                               [31D  [?2004l[1B[J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hmmv ~/Desktop[1m/[0m[0m/Scree*4.11.39* Resources[1m/[0m[0m/Other[1m/[0m[0m/. [K[A[90C[K[1B[K[A[90C                 [23D                       [23D  [?2004l[1B[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hmmv ~/Desktop[1m/[0m[0m/Scren *4.11.* Resources[1m/[0m[0m/Other[1m/[0m[0m [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggog git add .[?2004l
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit commit -m "README draft"[?2004l
+[main d7601ad] README draft
+ 6 files changed, 1164 insertions(+), 1 deletion(-)
+ create mode 100644 README.md
+ create mode 100644 Readme.pdf
+ delete mode 100644 Readme.txt
+ create mode 100644 "Resources/Other/Screenshot 2025-08-08 at 4.11.39\342\200\257AM.png"
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004httree[?2004l
+.
+├── KPhome_local_LOG.txt
+├── Kubernetes_Node_LOG.txt
+├── README.md
+├── Readme.pdf
+├── Resources
+│   ├── Documentation
+│   │   ├── Constraints.txt
+│   │   ├── Design.doc
+│   │   ├── Kubectl Reference Docs.pdf
+│   │   └── Voltage Park - Home Assignment Single Node (July2025).pdf
+│   ├── Other
+│   │   └── Screenshot 2025-08-08 at 4.11.39 AM.png
+│   └── VideoGenerator API TEST data
+├── Setup
+│   ├── Configuration
+│   │   ├── APItemplate.yml
+│   │   └── kubeconfig.yml
+│   └── DeployVideoGeneratorAPI
+├── VideoGenerator_API
+│   ├── back-end
+│   └── front-end
+├── VideoGenerator_Telemetry
+└── VideoGenerator_TEST
+    ├── IntegrationTests
+    ├── RegressionTests
+    ├── SanityTests
+    └── UnitTests
+
+17 directories, 11 files
+[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit 
