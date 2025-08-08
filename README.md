@@ -16,7 +16,7 @@ It satisfies the Voltage Park take-home assignment for a single node with **8× 
 ---
 
 ## High-Level Architecture
- - ![arch_diagram](Screenshot 2025-08-08 at 4.11.39 AM LINK)
+ - ![arch_diagram](https://github.com/keerthanap8898/VoltagePark_Assignment_Keerthana/blob/main/Resources/Other/Screenshot%202025-08-08%20at%204.11.39%E2%80%AFAM.png)
 
 ---
 
