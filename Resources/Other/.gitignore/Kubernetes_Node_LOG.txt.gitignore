@@ -2,7 +2,7 @@ Script started on Fri Aug  8 03:21:45 2025
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mssh ubuntu@147.185.41.100[27m[25D[27ms[27ms[27mh[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[?2004l
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[7mssh ubuntu@147.185.41.100[27m[25D[27ms[27ms[27mh[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m@[27m1[27m4[27m7[27m.[27m1[27m8[27m5[27m.[27m4[27m1[27m.[27m1[27m0[27m0[?2004l
 
 Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
 
@@ -45,7 +45,7 @@ Connection to 147.185.41.100 closed.
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hssh ubuntu@147.185.41.100[?2004l
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hssh ubuntu@147.185.41.100[?2004l
 
 Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
 
@@ -461,7 +461,7 @@ Current Scopes: none[m
          Protocols: +DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
 Current DNS Server: 8.8.8.8[m
        DNS Servers: 8.8.8.8 8.8.4.4[m
-        DNS Domain: maas voltagepark.net[m
+        DNS Domain: maas xCompany.net[m
 [m
 [0;1;39mLink 7 (enp157s0f1np1)[0m[m
 Current Scopes: none[m
@@ -764,7 +764,7 @@ client_loop: send disconnect: Broken pipe
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hssh ubuntu@147.185.41.100[?2004l
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hssh ubuntu@147.185.41.100[?2004l
 
 Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
 
@@ -3559,7 +3559,7 @@ Current Scopes: none[m
          Protocols: +DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
 Current DNS Server: 8.8.8.8[m
        DNS Servers: 8.8.8.8 8.8.4.4[m
-        DNS Domain: maas voltagepark.net[m
+        DNS Domain: maas xCompany.net[m
 [m
 [0;1;39mLink 7 (enp157s0f1np1)[0m[m
 Current Scopes: none[m
@@ -3750,7 +3750,7 @@ sed -n '1,200p' /etc/resolv.conf
 
 nameserver 127.0.0.53
 options edns0 trust-ad
-search voltagepark.net maas
+search xCompany.net maas
 [?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ [7msudo systemctl restart systemd-resolved[27m
 
 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo systemctl restart systemd-resolved
@@ -3925,7 +3925,7 @@ sudo sed -n '1,200p' /etc/hosts
 # b.) change or remove the value of 'manage_etc_hosts' in
 #     /etc/cloud/cloud.cfg or cloud-config from user-data
 #
-127.0.1.1 g227.voltagepark.net g227
+127.0.1.1 g227.xCompany.net g227
 127.0.0.1 localhost
 
 # The following lines are desirable for IPv6 capable hosts
@@ -3939,7 +3939,7 @@ client_loop: send disconnect: Broken pipe
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mgrep ^hosts: /etc/nsswitch.conf[27m
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[7mgrep ^hosts: /etc/nsswitch.conf[27m
 
 [K[A[46C[27mg[27mr[27me[27mp[27m [27m^[27mh[27mo[27ms[27mt[27ms[27m:[27m [27m/[27me[27mt[27mc[27m/[27mn[27ms[27ms[27mw[27mi[27mt[27mc[27mh[27m.[27mc[27mo[27mn[27mf[1B
 [K[?2004l
@@ -3948,7 +3948,7 @@ grep: /etc/nsswitch.conf: No such file or directory
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[7mgrep ^hosts: /etc/nsswitch.conf[27m
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[7mgrep ^hosts: /etc/nsswitch.conf[27m
 
 [K[A[46C[27mg[27mr[27me[27mp[27m [27m^[27mh[27mo[27ms[27mt[27ms[27m:[27m [27m/[27me[27mt[27mc[27m/[27mn[27ms[27ms[27mw[27mi[27mt[27mc[27mh[27m.[27mc[27mo[27mn[27mf[1B
 [K[?2004l
@@ -3957,7 +3957,7 @@ grep: /etc/nsswitch.conf: No such file or directory
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hgrep ^hosts: /etc/nsswitch.conf
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hgrep ^hosts: /etc/nsswitch.conf
 
 [K[K[A[59C[P[19C [20D[P[19C [20D[P[19C [20D[P[19C [20D[P[19C [20D[P[19C [20D[P[19C [20D" /etc/nsswitch.conf[19Dd /etc/nsswitch.conf[19Dn /etc/nsswitch.conf[19D[P[19C [20D[P[19C [20Dh /etc/nsswitch.conf[19Do /etc/nsswitch.conf[19Ds /etc/nsswitch.conf[19Dt /etc/nsswitch.conf[19Dn /etc/nsswitch.conf[19Da /etc/nsswitch.conf[19Dm /etc/nsswitch.conf[19De /etc/nsswitch.conf[19D" /etc/nsswitch.conf[19D[1C /etc/nsswitch.conf[19D[?2004l[1B
 
@@ -3965,7 +3965,7 @@ grep: /etc/nsswitch.conf: No such file or directory
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hgrep "hostname"  /etc/nsswitch.conf
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hgrep "hostname"  /etc/nsswitch.conf
 
 [K[K[A[63C[11D[11C[8D[8P[21C        [29Dd"  /etc/nsswitch.conf[21Dn"  /etc/nsswitch.conf[21Ds"  /etc/nsswitch.conf[21D[?2004l[1B
 
@@ -3973,7 +3973,7 @@ grep: /etc/nsswitch.conf: No such file or directory
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hlls -a[?2004l
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hlls -a[?2004l
 
 .				README.md
 ..				Resources
@@ -3984,7 +3984,7 @@ Readme.gitignore.pdf		VideoGenerator_TEST
 [1m[7m%[27m[1m[0m                                                                                          
  
 
-[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hls -agrep "dns"  /etc/nsswitch.conf
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hls -agrep "dns"  /etc/nsswitch.conf
 
 [K[K[A[46C[6Chostname"  /etc/nsswitch.conf[1B
 [A[46C[5C^[4Cs:[4P[19C    [1B
@@ -4372,7 +4372,7 @@ Current Scopes: none[m
          Protocols: +DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported[m
 Current DNS Server: 8.8.4.4[m
        DNS Servers: 8.8.8.8 8.8.4.4[m
-        DNS Domain: maas voltagepark.net[m
+        DNS Domain: maas xCompany.net[m
 [m
 [0;1;39mLink 7 (enp157s0f1np1)[0m[m
 Current Scopes: none[m
@@ -4482,36 +4482,129 @@ Current Scopes: none[m
 [m
 [0;1;39mLink 59 (lxcd54bf42806ad)[0m[m
 Current Scopes: none[m
-    sscript -a K
-[JKPhome_local_LOG.txt     Kubernetes_Node_LOG.txt[A[0m[27m[24m[46Cscript -a K[K       s  [?2004l
-[J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hssh ubuntu@147.185.41.100[25D                         [25Dssh ubuntu@147.185.41.100[25Dls -a                    [20Dgrep "dns"  /etc/nsswitch.conf
-[K[K[A[46C[6Chostname"  /etc/nsswitch.conf[1B[A[63C                  [1B[K[A[63C[11D         [9D      [?2004l[1B[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004h[?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hcclear[?2004l
-[3J[H[2J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hsscript -a 
+    sscript -a K
+
+[JKPhome_local_LOG.txt     Kubernetes_Node_LOG.txt[A[0m[27m[24m
+[46Cscript -a K[K       s  [?2004l
+
+[J[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hssh ubuntu@147.185.41.100[25D                         [25Dssh ubuntu@147.185.41.100[25Dls -a                    [20Dgrep "dns"  /etc/nsswitch.conf
+
+[K[K[A[46C[6Chostname"  /etc/nsswitch.conf[1B
+[A[63C                  [1B
+[K[A[63C[11D         [9D      [?2004l[1B
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004h[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hcclear[?2004l
+
+[3J[H[2J[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hsscript -a 
+
 [JKPhome_local_LOG.txt       README.md                  VideoGenerator_API/
 Kubernetes_Node_LOG.txt    Resources/                 VideoGenerator_Telemetry/
-Readme.gitignore.pdf       Setup/                     VideoGenerator_TEST/[3A[0m[27m[24m[46Cscript -a[K[1CK
-[J[JKPhome_local_LOG.txt     Kubernetes_Node_LOG.txt[A[0m[27m[24m[46Cscript -a K[KPhome_local_LOG.txt[19Dubernetes_Node_LOG.txt[?2004l
+Readme.gitignore.pdf       Setup/                     VideoGenerator_TEST/[3A[0m[27m[24m
+[46Cscript -a[K[1CK
+
+[J[JKPhome_local_LOG.txt     Kubernetes_Node_LOG.txt[A[0m[27m[24m
+[46Cscript -a K[KPhome_local_LOG.txt[19Dubernetes_Node_LOG.txt[?2004l
+
 [JScript started, output file is Kubernetes_Node_LOG.txt
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hexitgit statusadd . status[10Dexport YOUR_REG=docker.io/keerthanap8898[40Dgit status                              [30Dadd . status[10Dexit          
-bck-i-search: _[K[A[31Cgit statu[4ms[24m[1B[42Ds_[A[39Cremot[24me add origin https://github.com/keerthanap8898/VoltagePark_A[4mss[24mignment_Keerthana.git
-git branch -M main[K
-git push -u origin main[K
-bck-i-search: ss_[K[3A[7C[A[22C[4ms[4ms[4mh[24m ubuntu@147.185.41.100[K[1Bbck-i-search: ssh_      [24m [24m                      [1B[K[1B[K[1B[K[4A[46C[24ms[24ms[24mh[1B[K[A[46C[?2004l[1BWelcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hexitgit statusadd . status[10Dexport YOUR_REG=docker.io/keerthanap8898[40Dgit status                              [30Dadd . status[10Dexit          
+
+bck-i-search: _[K[A[31Cgit statu[4ms[24m[1B[42Ds_[A[39Cremot[24me add origin https://github.com/keerthanap8898/xCompany_A[4mss[24mignment_Keerthana.git
+
+git branch -M main[K
+
+git push -u origin main[K
+
+bck-i-search: ss_[K[3A[7C[A[22C[4ms[4ms[4mh[24m ubuntu@147.185.41.100[K[1B
+bck-i-search: ssh_      [24m [24m                      [1B
+[K[1B[K[1B[K[4A[46C[24ms[24ms[24mh[1B
+[K[A[46C[?2004l[1B
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -4541,16 +4634,39 @@ New release '24.04.3 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 
 
-Last login: Fri Aug  8 15:26:47 2025 from 216.243.41.115
+Last login: Fri Aug  8 15:26:47 2025 from 216.243.41.115
+
 [?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ Read from remote host 147.185.41.100: Operation timed out
 Connection to 147.185.41.100 closed.
 client_loop: send disconnect: Broken pipe
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hrrmr  [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hrrm -rf R
-[JREADME.md.gitignore  Resources/[A[0m[27m[24m[46Crm -rf R[Kesources/.DS_Store[?2004l
-[J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit add README.md.gitignore[1m [0m[0m [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hgit add README.md.gitignore[19D                   [19DDE esign_Document_v1.pdf[1m [0m[0m [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit status[?2004l
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hrrmr  [?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hrrm -rf R
+
+[JREADME.md.gitignore  Resources/[A[0m[27m[24m
+[46Crm -rf R[Kesources/.DS_Store[?2004l
+
+[J[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hggit add README.md.gitignore[1m [0m[0m [?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hgit add README.md.gitignore[19D                   [19DDE esign_Document_v1.pdf[1m [0m[0m [?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hggit status[?2004l
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -4584,32 +4700,40 @@ Untracked files:
 	[31mSetup/Configuration/DeployVideoGeneratorAPI/[m
 	[31mVideoGenerator_API/[m
 
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004heexit[?2004l
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004heexit[?2004l
+
 
 Script done, output file is Kubernetes_Node_LOG.txt
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004heexit[?2004l
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004heexit[?2004l
+
 
 Script done on Fri Aug  8 16:44:20 2025
 s... [=============                      ======================================                ====Scanning processes... [===========          ======================================    ======Scanning processes... [=========                                               ======================================                                         ========Scanning processes... [=======                                   ======================================                             ==========Scanning processes... [=====                       ======================================                 ============Scanning processes... [===           ======================================     ==============Scanning processes... [=                                                ======================================                                          ================Scanning processes...                                     [=====================================                              ==================Scanning processes..                        . [===================================                  ====================Scanning processes            ... [=================================      ======================Scanning processes... [===============================                                           ========================Scanning proce                                     sses... [=============================                               ==========================Scanning pro                         cesses... [===========================                   ============================Scanning p             rocesses... [=========================       ==============================Scanning  processes... [=======================                                            ================================Scanni                                      ng processes... [=====================                                ==================================Scan                          ning processes... [===================                    ====================================Sc              anning processes... [=================        ======================================  Scanning processes... [===============                                             ======================================                                       ==Scanning processes... [=============                                 ======================================                           ====Scanning processes... [===========                     ======================================               ======Scanning processes... [=========         ======================================   ========Scanning processes... [=======                                              ======================================                                        ==========Scanning processes... [=====                                  ======================================                            ============Scanning processes... [===                      ======================================                ==============Scanning processes... [=          ======================================    ================Scanning processes...                                                [=====================================                                         ==================Scanning processes..                                   . [===================================                             ====================Scanning processes                       ... [=================================                 ======================Scanning process           es... [===============================     ========================Scanning proce                                                sses... [=============================                                          ==========================Scanning pro                                    cesses... [===========================                              ============================Scanning p                        rocesses... [=========================                  ==============================Scanning             processes... [=======================      ================================Scanning processes... [=====================                                           ==================================Scan                                     ning processes... [===================                               ====================================Sc                         anning processes... [=================                   ======================================             Scanning processes... [===============       ====================================== ==Scanning processes... [=============                                            ======================================                                      ====Scanning processes... [===========                                ======================================                          ======Scanning processes... [=========                    ======================================              ========Scanning processes... [=======        ======================================  ==========Scanning processes... [=====                                             ======================================                                       ============Scanning processes... [===                                 ======================================                           ==============Scanning processes... [=                     ======================================               ================Scanning processes...          [=====================================   ==================Scanning processes..                                              . [===================================                                        ====================Scanning processes                                  ... [=================================                            ======================Scanning process                      es... [===============================                ========================Scanning proce          sses... [=============================    ==========================Scanning pro                                               cesses... [===========================                                         ============================Scanning p                                   rocesses... [=========================                             ==============================Scanning                        processes... [=======================                 ================================Scanni           ng processes... [=====================     ==================================Scan                                                ning processes... [===================                                          ====================================Sc                                    anning processes... [=================                              ======================================                        Scanning processes... [===============                  ======================================            ==Scanning processes... [=============      ==========================================Scanning processes... [===========                                           ======================================                                     ======Scanning processes... [=========                               ======================================                         ========Scanning processes... [======grep ^hosgrep ^hosts: /etc/nsswitch.conf
 
 grep: /etc/nsswitch.conf: No such file or directory
-kpurusho@Keerthanas-MacBook-Pro VoltagePark % grep ^hosts: /etc/nsswitch.conf
+kpurusho@Keerthanas-MacBook-Pro xCompany % grep ^hosts: /etc/nsswitch.conf
 
 grep: /etc/nsswitch.conf: No such file or directory
-kpurusho@Keerthanas-MacBook-Pro VoltagePark % grep "hostname"  /etc/nsswitch.conf
+kpurusho@Keerthanas-MacBook-Pro xCompany % grep "hostname"  /etc/nsswitch.conf
 
 grep: /etc/nsswitch.conf: No such file or directory
-kpurusho@Keerthanas-MacBook-Pro VoltagePark % grep "dns"  /etc/nsswitch.conf     
+kpurusho@Keerthanas-MacBook-Pro xCompany % grep "dns"  /etc/nsswitch.conf     
 
 grep: /etc/nsswitch.conf: No such file or directory
-kpurusho@Keerthanas-MacBook-Pro VoltagePark % ls -a
+kpurusho@Keerthanas-MacBook-Pro xCompany % ls -a
 .                               README.md
 ..                              Resources
 .git                            Setup
 KPhome_local_LOG.txt            VideoGenerator_API
 Kubernetes_Node_LOG.txt         VideoGenerator_Telemetry
 Readme.gitignore.pdf            VideoGenerator_TEST
-kpurusho@Keerthanas-MacBook-Pro VoltagePark % ssh ubuntu@147.185.41.100          
+kpurusho@Keerthanas-MacBook-Pro xCompany % ssh ubuntu@147.185.41.100          
 Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -4975,7 +5099,7 @@ Link 6 (enp157s0f0np0)
          Protocols: +DefaultRoute +LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
 Current DNS Server: 8.8.4.4
        DNS Servers: 8.8.8.8 8.8.4.4
-        DNS Domain: maas voltagepark.net
+        DNS Domain: maas xCompany.net
 
 Link 7 (enp157s0f1np1)
 Current Scopes: none
@@ -5111,7 +5235,7 @@ ubuntu@g227:~$ Read from remote host 147.185.41.100: Operation timed out
 Connection to 147.185.41.100 closed.
 client_loop: send disconnect: Broken pipe
 %                                                
-kpurusho@Keerthanas-MacBook-Pro VoltagePark % 
+kpurusho@Keerthanas-MacBook-Pro xCompany % 
 
 
 
@@ -5138,11 +5262,22 @@ kpurusho@Keerthanas-MacBook-Pro VoltagePark %
 
 
 Script started on Fri Aug  8 11:21:33 2025
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hexitgit statusadd . status[10Dexport YOUR_REG=docker.io/keerthanap8898[40Dgit status                              [30Dadd . status[10Dexit          
-bck-i-search: _[K[A[31Cgit statu[4ms[24m[1B[42Ds_[A[39Cremot[24me add origin https://github.com/keerthanap8898/VoltagePark_A[4mss[24mignment_Keerthana.git
-git branch -M main[K
-git push -u origin main[K
-bck-i-search: ss_[K[3A[7C[A[22C[4ms[4ms[4mh[24m ubuntu@147.185.41.100[K[1Bbck-i-search: ssh_      [24m [24m                      [1B[K[1B[K[1B[K[4A[46C[24ms[24ms[24mh[1B[K[A[46C[?2004l[1BWelcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hexitgit statusadd . status[10Dexport YOUR_REG=docker.io/keerthanap8898[40Dgit status                              [30Dadd . status[10Dexit          
+
+bck-i-search: _[K[A[31Cgit statu[4ms[24m[1B[42Ds_[A[39Cremot[24me add origin https://github.com/keerthanap8898/xCompany_A[4mss[24mignment_Keerthana.git
+
+git branch -M main[K
+
+git push -u origin main[K
+
+bck-i-search: ss_[K[3A[7C[A[22C[4ms[4ms[4mh[24m ubuntu@147.185.41.100[K[1B
+bck-i-search: ssh_      [24m [24m                      [1B
+[K[1B[K[1B[K[4A[46C[24ms[24ms[24mh[1B
+[K[A[46C[?2004l[1B
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-151-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -5172,16 +5307,39 @@ New release '24.04.3 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 
 
-Last login: Fri Aug  8 15:26:47 2025 from 216.243.41.115
+Last login: Fri Aug  8 15:26:47 2025 from 216.243.41.115
+
 [?2004h]0;ubuntu@g227: ~[01;32mubuntu@g227[00m:[01;34m~[00m$ Read from remote host 147.185.41.100: Operation timed out
 Connection to 147.185.41.100 closed.
 client_loop: send disconnect: Broken pipe
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hrrmr  [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hrrm -rf R
-[JREADME.md.gitignore  Resources/[A[0m[27m[24m[46Crm -rf R[Kesources/.DS_Store[?2004l
-[J[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit add README.md.gitignore[1m [0m[0m [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hgit add README.md.gitignore[19D                   [19DDE esign_Document_v1.pdf[1m [0m[0m [?2004l
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004hggit status[?2004l
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hrrmr  [?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hrrm -rf R
+
+[JREADME.md.gitignore  Resources/[A[0m[27m[24m
+[46Crm -rf R[Kesources/.DS_Store[?2004l
+
+[J[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hggit add README.md.gitignore[1m [0m[0m [?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hgit add README.md.gitignore[19D                   [19DDE esign_Document_v1.pdf[1m [0m[0m [?2004l
+
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004hggit status[?2004l
+
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -5215,6 +5373,10 @@ Untracked files:
 	[31mSetup/Configuration/DeployVideoGeneratorAPI/[m
 	[31mVideoGenerator_API/[m
 
-[1m[7m%[27m[1m[0m                                                                                           [0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro VoltagePark % [K[?2004heexit[?2004l
+[1m[7m%[27m[1m[0m                                                                                          
+ 
+
+[0m[27m[24m[Jkpurusho@Keerthanas-MacBook-Pro xCompany % [K[?2004heexit[?2004l
+
 
 Script done on Fri Aug  8 16:44:15 2025
