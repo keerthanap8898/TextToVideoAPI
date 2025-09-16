@@ -1,9 +1,20 @@
-apiVersion: v1
-kind: Service
+# This YAML manifest defines ingress rules for external access to the application services.
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: video-api-public
-  namespace: videogen
+  name: example-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  type: LoadBalancer
-  selector: { app: video-api }
-  ports: [{ port: 80, targetPort: 8000 }]
+  rules:
+  - host: example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: example-service
+            port:
+              number: 80

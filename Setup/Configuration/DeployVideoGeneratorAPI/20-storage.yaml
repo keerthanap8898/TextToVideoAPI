@@ -1,10 +1,24 @@
+# This YAML manifest defines persistent storage resources (PVCs, volumes) for the application.
+
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: videos-pvc
-  namespace: videogen
+  name: my-pvc
 spec:
-  accessModes: ["ReadWriteOnce"]
-  resources: { requests: { storage: 200Gi } }
-  # Change to your cluster storage class (e.g., "gp3", "local-path", etc.)
-  storageClassName: gp3
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/my-pv"

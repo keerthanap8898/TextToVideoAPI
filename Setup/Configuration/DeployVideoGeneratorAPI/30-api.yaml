@@ -1,34 +1,44 @@
+# This YAML manifest deploys the API service and its configuration for the application.
+# Environment: Production
+# The service exposes the API on port 80 and forwards traffic to pods on port 8080.
+# The deployment runs 3 replicas for high availability and scalability.
+# Dependencies: Assumes 'my-api-image:latest' is available in the container registry.
+
+
+# Define the API service
 apiVersion: v1
 kind: Service
 metadata:
-  name: video-api
-  namespace: videogen
+  name: my-api-service
 spec:
-  selector: { app: video-api }
-  ports: [{ port: 80, targetPort: 8000 }]
+  selector:
+    app: my-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
 ---
+
+# Define the API deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: video-api
-  namespace: videogen
+  name: my-api-deployment
 spec:
-  replicas: 2
-  selector: { matchLabels: { app: video-api } }
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-api
   template:
-    metadata: { labels: { app: video-api } }
+    metadata:
+      labels:
+          image: my-api-image:v1.0.0
     spec:
       containers:
-      - name: api
-        image: YOUR_REG/video-api:0.1
-        env:
-        - name: REDIS_URL
-          valueFrom: { configMapKeyRef: { name: api-config, key: REDIS_URL } }
-        - name: VIDEO_BASE_URL
-          valueFrom: { configMapKeyRef: { name: api-config, key: VIDEO_BASE_URL } }
-        volumeMounts:
-        - { name: videos, mountPath: /data/videos }
-        ports: [{ containerPort: 8000 }]
-      volumes:
-      - name: videos
-        persistentVolumeClaim: { claimName: videos-pvc }
+        - name: my-api-container
+          image: my-api-image:latest
+          ports:
+            - containerPort: 8080
+
+---
