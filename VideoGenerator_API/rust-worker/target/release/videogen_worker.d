@@ -1,1 +1,0 @@
-/Users/kpurusho/workspace/interview/VoltagePark/VideoGenerator_API/rust-worker/target/release/videogen_worker: /Users/kpurusho/workspace/interview/VoltagePark/VideoGenerator_API/rust-worker/src/main.rs
