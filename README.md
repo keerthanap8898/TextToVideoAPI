@@ -1,10 +1,12 @@
 o [View the full design document here (PDF)](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Text_to_Video_API_Docx_combined.pdf)
 
 # 1-pager
-## Text-to-Video API – MVP & Production Design Document
+## Text-to-Video API – MVP & Open-source Design Document
     - Author: Keerthana Purushotham
     - Date: 2025-08-08
     - Purpose: This document outlines the design for a Kubernetes-deployed Text-to-Video API service using the Genmo Mochi-1 model to solve the problem of scalable, asynchronous, prompt-driven video generation.
+    - This repository and work is fully maintained and owned by me (Keerthana), personally. You're welcome to pull what I've laid out, I've set up basic Licensing too.
+    - This MVP (not Production) isn't complete yet but everything successfully builds. I'll post a detailed wiki soon.
 
 1. Problem Statement (The Why)
   - Customers: Users and maintainers etc including and not restricted to Developers, researchers, and creative teams who need a scalable, programmatic text-to-video generation service.
