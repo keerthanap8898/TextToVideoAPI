@@ -1,4 +1,4 @@
-o [View the full design document here (PDF)](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Text_to_Video_API_Docx_combined.pdf)
+o [View the full design document here (PDF)](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Text_to_Video_API_Docx_combined.pdf)
 
 # 1-pager
 ## Text-to-Video API – MVP & Open-source Design Document
@@ -19,7 +19,7 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/x
   - Non-Goals: This MVP will not include advanced scheduling algorithms, RBAC, LLM-based load estimation, or zero-knowledge security layers - those are reserved for post-MVP.
 
   - Flow Diagram for the system design:
-     - ![flowdiagram](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Resources/Other/Images/Flowchart.png)
+     - ![flowdiagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Flowchart.png)
 
 3. Success Metrics (The How do we know it worked?)
   - MVP Success:
@@ -44,7 +44,7 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/x
   - Load visualization for video length vs prompt length - Estimated Runtime vs. Video Duration & Prompt Length
   - Isolines show approximate VRAM contours per sister node (illustrative)
 
-    - ![Load+space estimates projected across effort vs video length](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Resources/Other/Images/video_length_vs_duration.png)
+    - ![Load+space estimates projected across effort vs video length](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/video_length_vs_duration.png)
 
   - Scale: Deployment patterns to prevent DoS by region, user-group etc with rollback, canary testing, retries, rate-limits etc.
   - Exceptions:
@@ -121,7 +121,7 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/x
   ###Post-MVP Features – Prioritization Matrix
     - Purpose: Enable the team to quickly assess, vote, and sequence high-impact improvements after the MVP launch.
     - ### >> **`Voting Format: ✓ = must-have next, ?? = later, ✗ = not now.`**
-       - ![Compare and assess relevant prod features](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Resources/Other/Images/feature_comparison_table.png)
+       - ![Compare and assess relevant prod features](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/feature_comparison_table.png)
 
   - I’ve mapped each feature into an Effort vs Impact matrix so it’s easy to see trade-offs:
       * Green = Immediate High-Impact / Low Effort (01, 02, 03)
@@ -130,7 +130,7 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/x
       * Orange = Niche Impact / High Effort (09, 10)
     **Effort (developer hours) VS Impact Visualization** - (***for a given feature, on the overall code quality and performance trends of the Service***)**:**
       - See full documentation for details.
-      - ![plot Post MVP dev-effort-hrs vs impact with a normalized decimal score value](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Resources/Other/Images/dev-workload_vs_impact.png)
+      - ![plot Post MVP dev-effort-hrs vs impact with a normalized decimal score value](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/dev-workload_vs_impact.png)
 
 o MVP Repo Tree Diagram - so far ...
-![MVP Repo Tree Diagram - so far ...](https://github.com/keerthanap8898/xCompany_TechAssessment_Keerthana/blob/main/Resources/Other/Images/MVP_folder_tree.png)
+![MVP Repo Tree Diagram - so far ...](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/MVP_folder_tree.png)
