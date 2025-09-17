@@ -26,7 +26,8 @@ It does *not* include model weights or GPU-bound video generation yet.
 - Observability (Prometheus, Grafana, logging)
 - Security (JWT/OIDC auth, rate limiting, RBAC)
 
-## 🚀 Quickstart (local demo) - Will make a proper build setup runbook once I push some tests.
+## 🚀 Quickstart (local demo) 
+- Will make a proper build setup runbook/wiki once I push some tests.
 ```bash
 # 1. Start Redis
 docker run --rm -p 6379:6379 redis:7
