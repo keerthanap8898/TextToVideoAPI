@@ -57,18 +57,16 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
     - handled by python orchestration over encapsulated, asynchronous Rust worker modules that run atomized request threads that close by virtue of Rust’s memory/garbage management semantics that ensure that failed jobs do not break the validity of the session
    
 #### NP-Completeness and Determinism
-  - **Performance (latency):** `Scheduling is NP-hard` → handled with heuristics (queues, batching, rate limits); stable in statistics, not per run.  
-  - **Correctness (Rust ownership):** General correctness undecidable → Rust enforces memory safety at compile-time; `modules behave deterministically`.  
-  - **Concurrency (async threads):** `Deadlocks/races NP-hard` → bounded with small Rust workers + idempotent tasks; testable with stress/schedule checks.  
+  - **Performance (latency):** `Scheduling is NP-hard`, handled with heuristics (queues, batching, rate limits); stable statistically, not per run.
+  - **Correctness (Rust ownership):** General correctness is undecidable, but Rust enforces memory safety at compile time; `modules behave deterministically`.  
+  - **Concurrency (async threads):** `Deadlocks/races NP-hard`, but bounded with small Rust workers + idempotent tasks; validated with stress/schedule tests.
   - **HPC inference:** `Load balancing NP-hard & is thus, approximated`; with async streaming + job routing; predictable at cluster level via forecasts.  
-  - **Cross-language orchestration:** `Protocol addresses NP-hard` → by implementing idempotency hardening ID tag generation that're replayable & testable; to simplify schemas and versioning templates.  
+  - **Cross-language orchestration:** `Protocol conformance is NP-hard`, simplified with schemas, versioning, & idempotent IDs that can be retried upon failure, observed &/or tested appropriately for correctness.
 
-```
-Bottom line:
-The system avoids NP-complete complexity by combining Rust’s safety guarantees with Python’s orchestration heuristics, & enforces practical determinism through measurement, forecasting, + empirical design.
-```
-#### Complexity class landscape (`P`/ `NP`/ `NP-hard`/ `Unclear`) annotated with the calculated placement of system layers in a hybrid Rust+Python orchestration design.
-  - Complexity class inclusion diagram → ***shows how `P ⊂ NP`, `NP-complete`, `NP-hard`, & `Unclear/Undecided`, features (as identified above); play about in this project:
+##### Complexity class landscape (`P`/ `NP`/ `NP-hard`/ `Unclear`) annotated with the calculated placement of system layers in a hybrid Rust+Python orchestration design.
+  - *To conclude, I’m thus sharing a complexity-class-inclusion-diagram (attached).*
+  - *It helps visualize how P ⊂ NP, NP-complete, NP-hard, and Undecidable classes map against this project specifically.*
+  - *The img is annotated with where each system layer sits in the proposed design.* :)
       * ![P/NP/NP-hard/unclear - complexity class Venn diagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/NP-ness_Text-to-video_API.png)
 
 ---
