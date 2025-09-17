@@ -55,6 +55,25 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
     - ensure the OOPS aspects optimize computation without logical gaps or duplicate calculations
   - Concurrency
     - handled by python orchestration over encapsulated, asynchronous Rust worker modules that run atomized request threads that close by virtue of Rust’s memory/garbage management semantics that ensure that failed jobs do not break the validity of the session
+   
+#### NP-Completeness and Determinism
+  - **Performance (latency):** `Scheduling is NP-hard` → handled with heuristics (queues, batching, rate limits); stable in statistics, not per run.  
+  - **Correctness (Rust ownership):** General correctness undecidable → Rust enforces memory safety at compile-time; `modules behave deterministically`.  
+  - **Concurrency (async threads):** `Deadlocks/races NP-hard` → bounded with small Rust workers + idempotent tasks; testable with stress/schedule checks.  
+  - **HPC inference:** `Load balancing NP-hard & is thus, approximated`; with async streaming + job routing; predictable at cluster level via forecasts.  
+  - **Cross-language orchestration:** `Protocol addresses NP-hard` → by implementing idempotency hardening ID tag generation that're replayable & testable; to simplify schemas and versioning templates.  
+
+```
+Bottom line:
+The system avoids NP-complete complexity by combining Rust’s safety guarantees with Python’s orchestration heuristics, & enforces practical determinism through measurement, forecasting, + empirical design.
+```
+#### Complexity class landscape (`P`/ `NP`/ `NP-hard`/ `Unclear`) annotated with the calculated placement of system layers in a hybrid Rust+Python orchestration design.
+  - Complexity class inclusion diagram → ***shows how `P ⊂ NP`, `NP-complete`, `NP-hard`, & `Unclear/Undecided`, features (as identified above); play about in this project:
+      * ![P/NP/NP-hard/unclear - complexity class Venn diagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/NP-ness_Text-to-video_API.png)
+
+---
+
+## ***Hence*** -
 
 #### Assumptions:
   - Video length ≤10s for MVP.
@@ -62,7 +81,7 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
   - API structure is REST over JSON.
   - External object storage (S3/MinIO) is available.
 
-#### Open Questions:
+#### `Open Questions`:
   - Will the control plane ELB DNS be stable for external access? (known to cause costly DoS across regions resulting in downtime and loss)
   - Expected concurrency limits at demo vs production scale?
   - Any constraints on video length/quality &/or time limits from stakeholders?
@@ -72,24 +91,25 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
   1. Pre-signed URL misuse / role changes mid-job / token skew.
      - recover any state from persistent storage and retry
   2. Hot-keying in rate limiter; retry storms; DLQ loops.
-     - (fastapi-limiter &/or redis). Link: stackoverflow & documentation for the caveat described below
+     - (fastapi-limiter &/or redis). Link: [stackoverflow & documentation](https://stackoverflow.com/questions/65491184/ratelimit-in-fastapi#:~:text=In%20order%20to,this%20to%20work) for the caveat explained below..
      - NOTE: FastAPI doesn't natively support this, but it's possible with a few libraries such the ones below, but will usually require some sort of database backing (redis, memcached, etc), although slowapi has a memory fallback in case of no database.
      - reference documentation:
-         * https://pypi.org/project/fastapi-limiter/
-         * https://pypi.org/project/slowapi/
-     - `In order to use fastapi-limiter, as seen in their documentation: You will need a running Redis for this to work.`
+         * [fastapi-limiter | vendor reference doc link - PyPI - https://pypi.org/project/fastapi-limiter](https://pypi.org/project/fastapi-limiter/)
+         * [slowapi | vendor reference doc link - PyPI - https://pypi.org/project/slowapi](https://pypi.org/project/slowapi/)
+             - Vendor has noted issues with no patches suggesting that the project may be well on its way into being deprecated upstream and is hence, a poor design choice by default. 
+     - `In order to use fastapi-limiter, as seen in their documentation: You will need a running Redis for this to work.` - [Redis reference](https://redis.io/)
   3. Starvation of long jobs; convoy effects; head-of-line blocking.
      - dedicated long-task exception handler node with critical Alarm if task still fails;
      - some job length estimator module returning Boolean value paired with a dashboard tracking accuracy trends for the query – “is this potentially a long task based on context, linguistics, user/env metrics? Yes/No”
      - …alarms at sev-2.5 if accuracy (true positives and negatives) consistently falls over time (false values are increasing. Check estimator logic), alarm at sev 2 if it falls immediately
   4. Log PII, high-cardinality labels; sampling hiding tail latency.
-     - outliers and adversarial samples. Check if data corruption occurred via access/edit-logs, stack trace, etc to ensure no security exploitation broke the ML model.
-  5. Split-brain deploys across regions; partial rollbacks.
-     - rollout[ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout)
-     - set [ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#set)
-     - Scale [ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#scale)
-     - Autoscale [ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#autoscale)
-     - Auth [ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#auth)
+     - outliers and adversarial samples. Check if data corruption occurred via access/edit-logs, stack-trace, etc to ensure no security exploitation broke the ML model.
+  5. Kubernetes deployment Policies and Cluster-platform maintenance, with split-brain deploys across regions; partial rollbacks. Key **`kubectl`** commands for RBAC and other global/regional release strategy optimized for cluster resilience &/or network-traffic/load-metrics/schema-status/node-health, etc., specific scaling; i.e., I included hooks for advanced scheduling and cost estimation modules in these NP-complete problem
+     - `rollout`[kubectl-ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#rollout)
+     - `set` [kubectl-ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#set)
+     - `scale` [kubectl-ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#scale)
+     - `autoscale` [kubectl-ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#autoscale)
+     - `auth` [kubectl-ref](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#auth)
   6. Model nondeterminism vs “golden” tests; flaky perf from noisy neighbors.
      - Validation – check if things are right
      - Sanity – ensure wrong things can’t happen
@@ -122,6 +142,7 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
     - Purpose: Enable the team to quickly assess, vote, and sequence high-impact improvements after the MVP launch.
     - ### >> **`Voting Format: ✓ = must-have next, ?? = later, ✗ = not now.`**
        - ![Compare and assess relevant prod features](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/feature_comparison_table.png)
+       - More readable format - ![table_img_link](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Effort_vs_Impact_big_table.png)
 
   - I’ve mapped each feature into an Effort vs Impact matrix so it’s easy to see trade-offs:
       * Green = Immediate High-Impact / Low Effort (01, 02, 03)
