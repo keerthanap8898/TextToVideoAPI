@@ -10,8 +10,8 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
 
 1. Problem Statement (The Why)
   - Customers: Users and maintainers etc including and not restricted to Developers, researchers, and creative teams who need a scalable, programmatic text-to-video generation service.
-  - Pain Points: Current video generation tools are often single-instance, blocking, and lack scalable API endpoints. Customers require asynchronous, concurrent, multi-GPU processing to handle high request volumes.
-  - Urgency: Demand for generative AI video content is growing rapidly; this solution enables fast iteration and deployment.
+  - Pain Points: Current GenAI tools are often single-instance, blocking, and lack scalable API endpoints. Customers require asynchronous, concurrent, multi-GPU processing to handle high request volumes.
+  - Urgency: Demand for generative AI content is growing rapidly; this solution enables fast iteration and deployment.
 
 2. Proposed Solution (The What)
   - Goal is to build an asynchronous text-to-video API using the Genmo Mochi-1 model hosted on an 8×H100 GPU Kubernetes worker node. The backend will handle job submission, tracking, and retrieval via JSON-based endpoints. A basic React-based frontend will allow prompt submission, status monitoring, and file downloads. The system will be deployed on Kubernetes (K8s) with GPU resource allocation, multi-replica redundancy, and horizontal scaling.
@@ -59,8 +59,8 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
 #### NP-Completeness and Determinism
   - **Performance (latency):** `Scheduling is NP-hard`, handled with heuristics (queues, batching, rate limits); stable statistically, not per run.
   - **Correctness (Rust ownership):** General correctness is undecidable, but Rust enforces memory safety at compile time; `modules behave deterministically`.  
-  - **Concurrency (async threads):** `Deadlocks/races NP-hard`, but bounded with small Rust workers + idempotent tasks; validated with stress/schedule tests.
-  - **HPC inference:** `Load balancing NP-hard & is thus, approximated`; with async streaming + job routing; predictable at cluster level via forecasts.  
+  - **Concurrency (async threads):** `Deadlocks/races are NP-hard`, but bounded with small Rust workers + idempotent tasks; validated with stress/schedule tests.
+  - **HPC inference:** `Load balancing is NP-hard & is thus, approximated`; with async streaming + job routing; predictable at cluster level via forecasts.  
   - **Cross-language orchestration:** `Protocol conformance is NP-hard`, simplified with schemas, versioning, & idempotent IDs that can be retried upon failure, observed &/or tested appropriately for correctness.
 
 ##### Complexity class landscape (`P`/ `NP`/ `NP-hard`/ `Unclear`) annotated with the calculated placement of system layers in a hybrid Rust+Python orchestration design.
