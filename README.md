@@ -3,8 +3,8 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
 ## Latest Updates:
  1. **Research Cost analysis.**
  2. **Minimal features needed to convincingly prove my hypothesis:**
-     - ***... that Rust core threads can in fact ensure Correctness in HPC system structures & typically risky correctness-critical modules or use-cases.***
- 3. **Hierarchial Testing & Release Strategy.**
+     - ***... that Rust core threads can in fact ensure Correctness in HPC system structures & typically risky modules where correctness is critical or other related use-cases.***
+ 3. **Hierarchical Testing & Release Strategy.**
 
 # 1-pager (closer to a 5-Pager at this point...)
 ## Text-to-Video API – MVP & Open-source Design Document
@@ -16,15 +16,17 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
 ---
 
 ## Table of Contents
-    1. [Problem Statement](#1-problem-statement-the-why)  
-    2. [Proposed Solution](#2-proposed-solution-the-what)  
-    3. [Success Metrics](#3-success-metrics-the-how-does-one-know-it-worked)  
-    4. [Research Cost Analysis](#research-cost-analysis)
-    5. [Open Questions & Assumptions](#4-open-questions--assumptions)  
-    6. [Feature Prioritization & Risk Analysis](#feature-prioritization--risk-analysis)   
-    7. [Testing Strategy](#testing-strategy) 
-    8. [Other Corner Cases](#edge-cases-and-post-production-checks)  
-    9. [Appendix](#appendix-team-input-to-vote-and-choose-v1-production-release-features)  
+```
+   1. Problem Statement
+   2. Proposed Solution
+   3. Success Metrics
+   4. Research Cost Analysis
+   5. Open Questions and Assumptions
+   6. Feature Prioritization and Risk Analysis
+   7. Testing Strategy
+   8. Other Corner Cases
+   9. Appendix
+```
 
 ---
 
@@ -42,14 +44,14 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
 ---
 
 ## 3. Success Metrics (The How does one know it worked?)
-   ### MVP Success:
+   **MVP Success**:
          - ≥95% job success rate.
          - P95 end-to-end latency ≤10 min.
          - Queue wait P95 ≤2 min.
          - Throughput ≥4 parallel jobs.
          - API availability ≥99% during demo.
          - 100% output artifact validity.
-   ### Production Success:
+   **Production Success:**
          - API availability ≥99.9%.
          - P95 latency ≤6 min, P99 ≤10 min.
          - Job retries <1%, DLQ <0.1%.
@@ -68,56 +70,63 @@ o [View the full design document here (PDF)](https://github.com/keerthanap8898/T
        - Highlights phase peaks at correctness-heavy workloads (Multi-GPU support, Fault Tolerance, Load Testing).  
 ---
 
-## 5. Open Questions & Assumptions
+## 5. Open Questions and Assumptions
 
-### **Considerations & Estimations:**
-  - Load visualization for video length vs prompt length - Estimated Runtime vs. Video Duration & Prompt Length
-  - Isolines show approximate VRAM contours per sister node (illustrative)
-      - ![Load+space estimates projected across effort vs video length](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/video_length_vs_duration.png)
-  - Scale: Deployment patterns to prevent DoS by region, user-group etc.,with rollback, canary testing, retries, rate-limits etc.
-  - **Exceptions**:
+ a. **Considerations & Estimations**:
+   - **Load visualization for video length vs prompt length**:
+   - Isolines show approximate VRAM contours per sister node (illustrative)
+   
+ b.  **Estimated Runtime vs. Video Duration & Prompt Length**:
+ 
+   - ![Load+space estimates projected across effort vs video length](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/video_length_vs_duration.png)
+   
+ c. **Scale**: Deployment patterns to prevent DoS by region, user-group etc.,with rollback, canary testing, retries, rate-limits etc.
+ d. **Exceptions**:
       - Buggy prompt context from user – poor quality / lack of response
-      - Prompt work load exceeds resource allocation thresholds
+      - Prompt workload exceeds resource allocation thresholds
       - Infra security breaks -> retry & log relevant details
       - Are all tools compatible with potential upgrades & tool integrations without high refactoring costs?
-      - Ensure the OOPS aspects optimize computation without logical gaps or duplicate calculations.
-  - **Concurrency**:
+      - Ensure the OOPs aspects optimize computation without logical gaps or duplicate calculations.
+ e. **Concurrency**:
       - Handled by Python orchestration over encapsulated, asynchronous Rust worker modules that run atomized request threads that close by virtue of Rust’s memory/garbage management semantics that ensure that failed jobs do not break the validity of the session
    
-#### NP-Completeness & Determinism
+ f. **NP-Completeness & Determinism**:
   - **Performance (latency)**: `Scheduling is NP-hard`, handled with heuristics (queues, batching, rate limits); stable statistically, not per run.
   - **Correctness (Rust ownership)**: General correctness is undecidable, but Rust enforces memory safety at compile time; `modules behave deterministically`.  
   - **Concurrency (async threads)**: `Deadlocks/races are NP-hard`, but bounded with small Rust workers + idempotent tasks; validated with stress/schedule tests.
   - **HPC inference**: `Load balancing is NP-hard & is thus, approximated`; with async streaming + job routing; predictable at cluster level via forecasts.  
   - **Cross-language orchestration**: `Protocol conformance is NP-hard`, simplified with schemas, versioning, & idempotent IDs that can be retried upon failure, observed &/or tested appropriately for correctness.
 
-#### Complexity class landscape (`P`/ `NP`/ `NP-hard`/ `Unclear`) annotated with the calculated placement of system layers in a hybrid Rust+Python orchestration design.
+```
     - To conclude, I’m thus sharing a complexity-class-inclusion-diagram (attached).
-    - It helps visualize how P ⊂ NP, NP-complete, NP-hard, & Undecidable classes map against this project specifically.*
-### The img is annotated with where each system layer sits in the proposed design. :)
+    - It helps visualize how P ⊂ NP, NP-complete, NP-hard, & Undecidable classes map against this project specifically.
+```
+- **Complexity class landscape (`P`/ `NP`/ `NP-hard`/ `Unclear`) annotated with the calculated placement of system layers in a hybrid Rust + Python orchestration design - { i.e., where each system layer sits in the proposed design. :) }**
     
 * ![P/NP/NP-hard/unclear - complexity class Venn diagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/NP-ness_Text-to-video_API.png)
 
----
-
 #### ***Hence, to summarize***:
 
-### Assumptions:
+**Assumptions**:
+```
     - Video length ≤10s for MVP.
     - Resolution ≤768p.
-    - API structure is REST over JSON.
+    - API structure is REST-over-JSON.
     - External object storage (S3/MinIO) is available.
-### `Open Questions`:
+```
+**Open Questions**:
+```
     - Will the control plane ELB DNS be stable for external access? (known to cause costly DoS across regions resulting in downtime & loss)
     - Expected concurrency limits at demo vs production scale?
     - Any constraints on video length/quality &/or time limits from stakeholders?
     - Complex multi-part prompts requiring state management, explicit network hardening (over sandboxing) plus encryption.
+```
 ---
 
-## 6. Feature Prioritization & Risk Analysis
+## 6. Feature Prioritization and Risk Analysis
 
-### Table mapping **minimal correctness-critical features** vs optional research ones.  
-
+  **Table mapping **minimal correctness-critical features** vs optional research ones.**
+  
 - ![Feature Prioritization Table](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/FeaturePrioritization_RiskAnalysis_Table.png)  
 
       Tier 1 (High):
@@ -243,15 +252,18 @@ Hence, my testing methodology includes:
 ## 9. Appendix: team input – Vote & choose v1 release features for prod.
 
   ### Post-MVP Features – Prioritization Matrix
-    - Purpose: Enable the team to quickly assess, vote, & sequence high-impact improvements after the MVP launch.
-    - ### >> **`Voting Format: ✓ = must-have next, ?? = later, ✗ = not now.`**
-       - ![Compare & assess relevant prod features](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/feature_comparison_table.png)
-       - More readable format - ![table_img_link](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Effort_vs_Impact_big_table.png)
+      - Purpose: Enable the team to quickly assess, vote, & sequence high-impact improvements after the MVP launch.
+      
+   >> **`Voting Format: ✓ = must-have next, ?? = later, ✗ = not now.`**
+     - ![Compare & assess relevant prod features](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/feature_comparison_table.png)
+   
+   - **More readable format**:
+     - ![table_img_link](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Effort_vs_Impact_big_table.png)
 
 #### Effort (developer hours) VS Impact Visualization:
 -  ![plot Post MVP dev-effort-hrs vs impact with a normalized decimal score value](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/dev-workload_vs_impact.png)
 
-**I’ve mapped each feature into an Effort vs Impact matrix so it’s easy to see trade-offs for a given feature, on the overall code quality & performance trends of the Service:**
+**I’ve mapped each feature into an Effort vs Impact matrix so it’s easy to see trade-offs for a given feature, on the overall code quality & performance trends of the Service**:
 
     - Green = Immediate High-Impact / Low Effort (01, 02, 03)
     - Blue = High-Impact / Medium Effort (04, 05, 06)
@@ -259,5 +271,6 @@ Hence, my testing methodology includes:
     - Orange = Niche Impact / High Effort (09, 10)
     
     See full documentation for details.
+    
 o MVP Repo Tree Diagram - so far ...
-![MVP Repo Tree Diagram - so far ...](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/MVP_folder_tree.png)
+  - ![MVP Repo Tree Diagram - so far ...](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/MVP_folder_tree.png)
