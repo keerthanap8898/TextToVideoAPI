@@ -1,5 +1,5 @@
 # `Text-to-Video API`
-## *To prove if Rust based hybrid-infrastructure can deliver safer, more scalable infrastructure than pure C++, Python, etc., based designs that typically handle HPC workloads involving predictive models, distributed-nodes, unstructured-data &/or high-traffic networks.*
+## *To prove if Rust based hybrid-systems can deliver safer, more scalable infrastructure than pure C++, Python, etc., based designs that typically handle HPC workloads involving predictive models, distributed-nodes, unstructured-data &/or high-traffic networks.*
 → [View the full design document here (PDF)](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Text_to_Video_API_Docx_combined.pdf)
 
 ### `Latest Updates`:
