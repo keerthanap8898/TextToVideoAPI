@@ -96,24 +96,23 @@
 ## 6. Open Questions and Assumptions
 
  a. **Considerations & Estimations**:
-    - **Load visualization for video length vs prompt length**:
-    - Isolines show approximate VRAM contours per sister node (illustrative)
+     - **Load visualization for video length vs prompt length**:
+     - Isolines show approximate VRAM contours per sister node (illustrative)
    
  b.  **Estimated Runtime vs. Video Duration & Prompt Length**:
- 
-   - ![Load+space estimates projected across effort vs video length](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/video_length_vs_duration.png)
+     - ![Load+space estimates projected across effort vs video length](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/video_length_vs_duration.png)
    
  c. **Scale**: Deployment patterns to prevent DoS by region, user-group etc.,with rollback, canary testing, retries, rate-limits etc.
  
  d. **Exceptions**:
-    - Buggy prompt context from user – poor quality / lack of response
-    - Prompt workload exceeds resource allocation thresholds
-    - Infra security breaks -> retry & log relevant details
-    - Are all tools compatible with potential upgrades & tool integrations without high refactoring costs?
-    - Ensure the OOPs aspects optimize computation without logical gaps or duplicate calculations.
+     - Buggy prompt context from user – poor quality / lack of response
+     - Prompt workload exceeds resource allocation thresholds
+     - Infra security breaks -> retry & log relevant details
+     - Are all tools compatible with potential upgrades & tool integrations without high refactoring costs?
+     - Ensure the OOPs aspects optimize computation without logical gaps or duplicate calculations.
       
  e. **Concurrency**:
-    - Handled by Python orchestration over encapsulated, asynchronous Rust worker modules that run atomized request threads that close by virtue of Rust’s memory/garbage management semantics that ensure that failed jobs do not break the validity of the session
+     - Handled by Python orchestration over encapsulated, asynchronous Rust worker modules that run atomized request threads that close by virtue of Rust’s memory/garbage management semantics that ensure that failed jobs do not break the validity of the session
    
  f. **NP-Completeness & Determinism**:
  
@@ -172,51 +171,51 @@ Hence, my testing methodology includes:
   **`8.A. Core Functional Testing` :**
     
    a. **Model Nondeterminism vs “Golden” Tests**:  
-       ***Manage drift in generated outputs. Golden baselines should be reproducible within a tolerance margin. Meant to detect flaky performance caused by noisy neighbors in shared GPU environments.***
-        - **Category:** *Pre-release* & *Nightly regression*
+      ***Manage drift in generated outputs. Golden baselines should be reproducible within a tolerance margin. Meant to detect flaky performance caused by noisy neighbors in shared GPU environments.***
+      - **Category:** *Pre-release* & *Nightly regression*
         
    b. **Validation**:
-       ***Check if things are right under expected inputs & conditions.*** 
-        - **Category:** *Pre-release*  
+      ***Check if things are right under expected inputs & conditions.*** 
+      - **Category:** *Pre-release*  
         
    c. **Sanity**:
        ***Ensure wrong or impossible things can’t happen (bad configs, invalid data).***
-        - **Category:** *Pre-release* & *CI/CD blocking*  
+      - **Category:** *Pre-release* & *CI/CD blocking*  
         
    d. **Unit**:
-       ***Cover as many test cases as possible, including edge cases, corner cases, & outlier scenarios.***  
-        - **Category:** *Pre-release* & *Continuous integration*  
+      ***Cover as many test cases as possible, including edge cases, corner cases, & outlier scenarios.***  
+      - **Category:** *Pre-release* & *Continuous integration*  
         
    e. **Integration**:
-       ***Verify cross-tool & cross-module workflows behave correctly.*** 
-        - *(e.g., pre-processing → model inference → post-processing → storage).*  
-       - **Category:** *Pre-release* & *Continuous integration*  
+      ***Verify cross-tool & cross-module workflows behave correctly.*** 
+      - *(e.g., pre-processing → model inference → post-processing → storage).*  
+      - **Category:** *Pre-release* & *Continuous integration*  
        
    f. **Regression**:
-       ***Ensure that new changes don’t break existing functionality or previously fixed bugs.***
-       - **Category:** *Pre-release* & *Nightly regression*  
+      ***Ensure that new changes don’t break existing functionality or previously fixed bugs.***
+      - **Category:** *Pre-release* & *Nightly regression*  
 
   **`8.B. Advanced / Non-Functional Testing` :**
   
    a. **Load Testing**:
-       ***Simulate heavy usage across multiple GPUs/nodes; measure throughput, latency, & memory pressure at scale.***
-        - **Category:** *Pre-release* for capacity planning; *Canary* for production safety  
+      ***Simulate heavy usage across multiple GPUs/nodes; measure throughput, latency, & memory pressure at scale.***
+      - **Category:** *Pre-release* for capacity planning; *Canary* for production safety  
         
    b. **Stress Testing**:
-       ***Push system beyond expected limits (e.g., GPU memory exhaustion, burst API calls, long video generations) to observe controlled failures & recovery.***
-        - **Category:** *Pre-release* only  
+      ***Push system beyond expected limits (e.g., GPU memory exhaustion, burst API calls, long video generations) to observe controlled failures & recovery.***
+      - **Category:** *Pre-release* only  
         
    c. **Chaos Testing**:
-       ***Inject faults (GPU preemption, node restarts, throttled APIs, network partitions) to validate resilience, correctness under disruption, & graceful degradation.***
-        - **Category:** *Canary* (production experiments)  
+      ***Inject faults (GPU preemption, node restarts, throttled APIs, network partitions) to validate resilience, correctness under disruption, & graceful degradation.***
+      - **Category:** *Canary* (production experiments)  
         
    d. **Soak Testing**:
-       ***Run long-duration jobs to uncover resource leaks, GPU overheating issues, or slow degradation of performance/quality.***
-        - **Category:** *Pre-release (staging clusters)*  
+      ***Run long-duration jobs to uncover resource leaks, GPU overheating issues, or slow degradation of performance/quality.***
+      - **Category:** *Pre-release (staging clusters)*  
         
    e. **Concurrency & Safety**:
-       ***Explicitly test multi-GPU scheduling, thread/process safety, & race-condition scenarios in distributed pipelines.***
-        - **Category:** *Pre-release* & *CI/CD*  
+      ***Explicitly test multi-GPU scheduling, thread/process safety, & race-condition scenarios in distributed pipelines.***
+      - **Category:** *Pre-release* & *CI/CD*  
 
   **`8.C. Test Deployment Strategy` :**
   
@@ -278,9 +277,9 @@ Hence, my testing methodology includes:
        - FastAPI doesn't natively support rate-limiting, but it's possible with a few libraries (listed below), but will usually require some sort of database backing (redis, memcached, etc.), although slowapi has a memory fallback in case of no database.
        
    - Reference documentation:
-      a. [fastapi-limiter | vendor reference doc link - PyPI - https://pypi.org/project/fastapi-limiter](https://pypi.org/project/fastapi-limiter/)
-      b. [Redis reference](https://redis.io/)
-      c. [***slowapi | vendor reference doc link - PyPI - https://pypi.org/project/slowapi***](https://pypi.org/project/slowapi/)
+      - a. [fastapi-limiter | vendor reference doc link - PyPI - https://pypi.org/project/fastapi-limiter](https://pypi.org/project/fastapi-limiter/)
+      - b. [Redis reference](https://redis.io/)
+      - c. [***slowapi | vendor reference doc link - PyPI - https://pypi.org/project/slowapi***](https://pypi.org/project/slowapi/)
          - `slowapi`'s vendor has noted issues with no patches suggesting that the project may be well on its way into being deprecated upstream & is hence, a poor design choice by default.      
 ---
  
@@ -308,23 +307,26 @@ Hence, my testing methodology includes:
 
   - **`Key Stakeholders`:**
   
-       a. **Users**: API consumers (developers, researchers)
-       b. **Tech Support**: Handles incidents & outages
-       c. **Developers**: Build & maintain backend/frontend
-       d. **Vendor Organization**: Voltage Park infrastructure team
-       e. **Network Peers**: Any API gateway/CDN providers
-       f. **Node Cluster**: K8s worker node (8×H100)
-       g. **Control Plane**: Managed by vendor, not directly accessible
+    - a. **Users**: API consumers (developers, researchers)
+    - b. **Tech Support**: Handles incidents & outages
+    - c. **Developers**: Build & maintain backend/frontend
+    - d. **Vendor Organization**: Voltage Park infrastructure team
+    - e. **Network Peers**: Any API gateway/CDN providers
+    - f. **Node Cluster**: K8s worker node (8×H100)
+    - g. **Control Plane**: Managed by vendor, not directly accessible
        
   - **`Next Steps`:**
     
-       a. Deploy initial API & worker pods on K8s.
-       b. Implement asynchronous endpoints.
-       c. Finalize v1 prod features critical to release for enterprise scale.
-       d. Build basic React frontend.
-       e. Integrate Prometheus/Grafana monitoring.
-       f. Conduct load test for target throughput.
-       g. Prepare for demo & stakeholder review.
+    - a. Deploy initial API & worker pods on K8s.
+    - b. Implement asynchronous endpoints.
+    - c. Finalize v1 prod features critical to release for enterprise scale.
+    - d. Build basic React frontend.
+    - e. Integrate Prometheus/Grafana monitoring.
+    - f. Conduct load test for target throughput.
+    - g. Prepare for demo & stakeholder review.
+
+  - **`GPU-Usage Gantt Chart`:**
+      - ![Gantt-Chart](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Optimized%20GPU%20Gantt%20Chart%20with%20Usage%20Annotations%20and%20Stage-based%20Colors.png)
 ---
 
 
