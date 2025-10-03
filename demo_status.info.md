@@ -112,3 +112,47 @@ Feel free to share questions, suggestions, etc. I’m sharing this project itera
 
 The aim is to eventually communicate my Rx goals so well that I can demonstrate the proposed logic convincingly in & across, any/all domains, use-cases & configs; by analyzing, generalizing & schematizing the core logical-'knots' & considerations raised by the community into verified, formal proof-backed features to handle HPC-correctness at a global, enterprise scale.
 ```
+
+3. 3rd Update [https://www.linkedin.com/posts/keerthanapurushotham_estimated-financial-investment-needed-to-activity-7379975825049391106-2HoI](https://www.linkedin.com/posts/keerthanapurushotham_estimated-financial-investment-needed-to-activity-7379975825049391106-2HoI)
+- Text:
+```
+Estimated Financial Investment needed to support GPU Usage for my HPC-Rust infra project
+
+Main Hypothesis: Correctness-critical logic in HPC/AI pipelines can be reliably isolated into atomic Rust workers, with high-lvl orchestration in Py/C++, thus ensuring correctness, fault isolation & concurrency without sacrificing scalability/ performance.
+
+To validate this, I prove practical feasibility before theoretical correctness:
+⟾ Can the system handle large-scale workloads predictably?
+⟾ What is the realistic cost of correctness testing (chaos, stress, regression, integration)?
+⟾ Investment (GPU-hours, budget, etc.) needed to sustain all planned steps?
+
+🔍 How the Data Provides Insight [see images] —
+
+◈ 1• Filter Critical Features: This mapping allows us to see where funds should flow first: correctness-first features dominate the cost.
+⟼ Broke down the system into 10 features.
+⟼ Classified into Tier-1 High Priority (must prove correctness), Tier-2 Medium (supports validation) & Tier-3 Low (ancillary).
+
+◈ 2• Timeline & Scaling: first 3 weeks of set-up demand high GPU use, followed by another burst during load testing.
+⟼ Plan scaled to 120 days with each feature’s execution window mapped sequentially on this timeline.
+⟼ Helps anticipate when funds are needed over reviewing at bulk.
+
+◈ 3• Unit of Cost/phase: GPUhrs × compute-intensity= $$
+⟼ GPU concurrency × avg hrs/day × days = Total GPUhrs (e.g. Load testing at 8 GPUs ×15.8 hrs/day ×10days ≈1264 GPU-hrs).
+⟼ Converted into cost ($/GPU-hour) for best, avg & worst-cases.
+
+◈ 4• Aggregation into 5-Day Windows: Stakeholders can see when peaks occur; justifies burst-capacity funding over flat-line allocation.
+⟼ Split GPUhrs into 24–25 slices = 5 days.
+⟼ Calculated mean GPU-hrs/day per window, a time-series of resource consumption.
+⟼ Plotted $ costs to show dual perspective of money & machine time.
+
+◈ 5• Visualizing Peaks, Valleys & Risks: high upfront cost in GPU credits/testing infra,
+⟼ Peak GPU use = 128 GPU-hrs/day (baseline chaos + multi-GPU integration).
+⟼ Idle valleys = <20 GPU-hrs/day during offline phases.
+
+👉 Why This Matters:
+1. Predictability: GPU & monetary resources needed can estimated before building at scale,
+2. Prioritization: Tier-1 features (Fault tolerance, Scheduling, Validation) absorb ~70% of cost → investors know where funds create the strongest correctness proof.
+3. Risk Reduction: Estimating upfront avoids overspend & de-risks commitments — can request credits/funds proportional to real workload spikes.
+4. Hypothesis Proof: By mapping correctness → GPU-hrs → cost, I prove Rust-thread isolation is not just conceptually correct, but economically sustainable.
+
+Thus the data provides a funding roadmap — it bridges research logic with real investment decisions. It shows the price of correctness, when it peaks & why correctness-first design in HPC with Rust cores is both necessary & financially justified.
+```
