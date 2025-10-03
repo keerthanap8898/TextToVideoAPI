@@ -181,7 +181,7 @@
       ``` 
 ---
      
-# 8. Testing Strategy
+## 8. Testing Strategy
   ***The system is designed for reliability & correctness under diverse workloads. Model nondeterminism vs “golden” tests; flaky performance from noisy neighbors. Since text-to-video generation involves GPU scheduling, multi-process execution, & distributed infra, the testing layers span both functional & non-functional validation.***  
 Hence, my testing methodology includes:
 
