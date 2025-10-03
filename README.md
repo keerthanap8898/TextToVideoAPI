@@ -1,23 +1,30 @@
+# `Text-to-Video API`
+## *To prove if Rust can deliver safer, more scalable infrastructure than pure C++ based designs that typically handle HPC workloads involving predictive models, distributed-nodes, unstructured-data &/or high-traffic networks.*
 → [View the full design document here (PDF)](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Text_to_Video_API_Docx_combined.pdf)
 
-### Latest Updates:
- 1. **Research Cost analysis.**
- 2. **Minimal features needed to convincingly prove my hypothesis:**
-     - *... that Rust core threads can in fact ensure Correctness in HPC system structures & typically risky modules where correctness is critical or other related use-cases.*
- 3. **Hierarchical Testing & Release Strategy.**
+### `Latest Updates`:
+```
+ 1. Research Cost analysis.
+ 2. Minimal features needed to convincingly prove my hypothesis.
+     (... that Rust core threads can in fact ensure Correctness in 
+     HPC system structures & typically risky modules where correctness 
+     is critical or other related use-cases.)
+ 3. Hierarchical Testing & Release Strategy.
+ ```
 
 ---
 
-**`1-pager` -** *`( closer to a 5-Pager at this point... )`*
+## `1-pager` Text-to-Video API – MVP & Open-source Design Document
+[ *`closer to a 5-Pager at this point`* 🙃 ]
 
-# Text-to-Video API – MVP & Open-source Design Document
-
+---
+```
 - Author: Keerthana Purushotham  
 - Date: 2025-08-08  
 - Purpose: This document outlines the design for a Kubernetes-deployed Text-to-Video API service using the Genmo Mochi-1 model to solve the problem of scalable, asynchronous, prompt-driven video generation.  
 - This repository & work is fully maintained & owned by me (Keerthana), personally. You're welcome to pull what I've laid out, I've set up basic Licensing too.  
 - This MVP (not Production) isn't complete yet but everything successfully builds. I'll post a detailed wiki soon.  
-
+```
 ---
 
 ## Table of Contents
