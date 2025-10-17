@@ -4,12 +4,8 @@
 
 ### `Latest Updates`:
 ```
- 1. Research Cost analysis.
- 2. Minimal features needed to convincingly prove my hypothesis.
-     (... that Rust core threads can in fact ensure Correctness in 
-     HPC system structures & typically risky modules where correctness 
-     is critical or other related use-cases.)
- 3. Hierarchical Testing & Release Strategy.
+ 1. Changed Apache 2.0 License to MIT License.
+ 2. Research Cost analysis.
  ```
 
 ---
