@@ -28,18 +28,18 @@
 ---
 
 ## Table of Contents
-   1. Problem Statement 
-   2. Proposed Solution
-   3. Architecture & Components
-   4. Success Metrics
-   5. Research Planning: GPU Cost & Orchestration Analysis
-   6. Open Questions & Assumptions
-   7. Feature Prioritization & Risk Analysis
-   8. Testing Strategy
-   9. Deployment & Operations
-  10. Corner Cases & Risk Controls
-  11. Stakeholders & Next Steps
-  12. Appendix
+   1. [Problem Statement](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#1-problem-statement-) 
+   2. [Proposed Solution](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#2-proposed-solution-) 
+   3. [Architecture & Components](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#3-architecture--components) 
+   4. [Success Metrics](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#4-success-metrics-the-how-does-one-know-it-worked) 
+   5. [Research Planning: GPU Cost & Orchestration Analysis](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#5-research-planning-gpu-cost--orchestration-analysis) 
+   6. [Open Questions & Assumptions](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#6-open-questions-and-assumptions) 
+   7. [Feature Prioritization & Risk Analysis](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#7-feature-prioritization-and-risk-analysis) 
+   8. [Testing Strategy](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#8-testing-strategy) 
+   9. [Deployment & Operations](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#9-deployment--operations) 
+  10. [Corner Cases & Risk Controls](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#10-corner-cases--risk-control) 
+  11. [Stakeholders & Next Steps](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#11-stakeholders--next-steps) 
+  12. [Appendix](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#12-appendix-team-input--vote--choose-v1-release-features-for-prod)
 
 ---
 
