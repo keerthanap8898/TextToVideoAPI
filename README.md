@@ -1,41 +1,31 @@
-# `Text-to-Video API`
-## *To prove if Rust based hybrid-systems can deliver safer, more scalable infrastructure than pure C++, Python, etc., based designs that typically handle HPC workloads involving predictive models, distributed-nodes, unstructured-data &/or high-traffic networks.*
-→ [View the full design document here (PDF)](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Text_to_Video_API_Docx_combined.pdf)
-
-### `Latest Updates`:
-```
- 1. Changed Apache 2.0 License to MIT License.
- 2. Research Cost analysis.
- ```
-
+# [ *`Text-to-Video API`* ] 5-pager
+    Copyright (C) 2025  Keerthana Purushotham <keep.consult@proton.me>.
+    Licensed under the GNU AGPL v3. See LICENSE for details.
 ---
-
-## `1-pager` Text-to-Video API – MVP & Open-source Design Document
-[ *`closer to a 5-Pager at this point`* 🙃 ]
-
----
-```
-- Author: Keerthana Purushotham  
-- Date: 2025-08-08  
-- Purpose: This document outlines the design for a Kubernetes-deployed Text-to-Video API service using the Genmo Mochi-1 model to solve the problem of scalable, asynchronous, prompt-driven video generation.  
-- This repository & work is fully maintained & owned by me (Keerthana), personally. You're welcome to pull what I've laid out, I've set up basic Licensing too.  
-- This MVP (not Production) isn't complete yet but everything successfully builds. I'll post a detailed wiki soon.  
-```
----
-
-## Table of Contents
-   1. [Problem Statement](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#1-problem-statement-) 
-   2. [Proposed Solution](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#2-proposed-solution-) 
-   3. [Architecture & Components](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#3-architecture--components) 
-   4. [Success Metrics](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#4-success-metrics-the-how-does-one-know-it-worked) 
-   5. [Research Planning: GPU Cost & Orchestration Analysis](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#5-research-planning-gpu-cost--orchestration-analysis) 
-   6. [Open Questions & Assumptions](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#6-open-questions-and-assumptions) 
-   7. [Feature Prioritization & Risk Analysis](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#7-feature-prioritization-and-risk-analysis) 
-   8. [Testing Strategy](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#8-testing-strategy) 
-   9. [Deployment & Operations](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#9-deployment--operations) 
-  10. [Corner Cases & Risk Controls](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#10-corner-cases--risk-control) 
-  11. [Stakeholders & Next Steps](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#11-stakeholders--next-steps) 
-  12. [Appendix](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#12-appendix-team-input--vote--choose-v1-release-features-for-prod)
+> ### *The research goal is to demonstrate that Rust-based hybrid systems can deliver safer and more scalable infrastructure than pure C++, Python, or other traditional designs typically used for HPC workloads involving predictive models, distributed nodes, unstructured data, and/or high-traffic networks.*
+> ## MVP & Open-source Design Document
+>     ⟴ Author: Keerthana Purushotham  
+>     ⟴ Date: 2025-08-08  
+>     ⟴ Purpose: This document outlines the design for a Kubernetes-deployed Text-to-Video API service using the Genmo Mochi-1 model to solve the problem of scalable, asynchronous, prompt-driven video generation.  
+>       ⇒ This repository & work is fully maintained & owned by me (Keerthana), personally. You're welcome to pull what I've laid out, I've set up basic Licensing too.  
+>       ⇒ This MVP (not Production) isn't complete yet but everything successfully builds. I'll post a detailed wiki soon.  
+> #### `Latest Updates`:
+>     ⇒ Changed Apache 2.0 License to GNU Affero General Public License v3.0.
+>     ⇒ Research Cost analysis.
+> ---
+> ## Table of Contents
+>    1. [Problem Statement](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#1-problem-statement-) 
+>    2. [Proposed Solution](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#2-proposed-solution-) 
+>    3. [Architecture & Components](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#3-architecture--components) 
+>    4. [Success Metrics](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#4-success-metrics-the-how-does-one-know-it-worked) 
+>    5. [Research Planning: GPU Cost & Orchestration Analysis](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#5-research-planning-gpu-cost--orchestration-analysis) 
+>    6. [Open Questions & Assumptions](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#6-open-questions-and-assumptions) 
+>    7. [Feature Prioritization & Risk Analysis](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#7-feature-prioritization-and-risk-analysis) 
+>    8. [Testing Strategy](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#8-testing-strategy) 
+>    9. [Deployment & Operations](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#9-deployment--operations) 
+>   10. [Corner Cases & Risk Controls](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#10-corner-cases--risk-control) 
+>   11. [Stakeholders & Next Steps](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#11-stakeholders--next-steps) 
+>   12. [Appendix](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#12-appendix-team-input--vote--choose-v1-release-features-for-prod)
 
 ---
 
