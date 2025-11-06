@@ -1,5 +1,6 @@
 # [ *`Text-to-Video API`* ] 5-pager
-    Copyright (C) 2025  Keerthana Purushotham <keep.consult@proton.me>.
+
+    CopyrightⒸ 2025  Keerthana Purushotham <keep.consult@proton.me>.
     Licensed under the GNU AGPL v3. See LICENSE for details.
 ---
 > ### *The research goal is to demonstrate that Rust-based hybrid systems can deliver safer and more scalable infrastructure than pure C++, Python, or other traditional designs typically used for HPC workloads involving predictive models, distributed nodes, unstructured data, and/or high-traffic networks.*
