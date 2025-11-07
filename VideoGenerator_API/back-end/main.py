@@ -1,4 +1,4 @@
-# FastAPI backend for VoltagePark VideoGen API
+# FastAPI backend for VideoGen API
 # Handles job submission, status queries, job listing, and result retrieval via Redis.
 import os, uuid, time  # Import OS, UUID, and time utilities
 from typing import Optional  # For optional type hints
