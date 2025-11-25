@@ -13,7 +13,8 @@
 >       ⇒ This repository & work is fully maintained & owned by me (Keerthana), personally. You're welcome to pull what I've laid out, I've set up basic Licensing too.  
 >       ⇒ This MVP (not Production) isn't complete yet but everything successfully builds. I'll post a detailed wiki soon.  
 > #### `Latest Updates`:
->     ⇒ Changed Apache 2.0 License to GNU Affero General Public License v3.0.
+>     ⇒ Modified License with acknowledgement to Voltage Park for initial MVP goals via an old take home challenge assigned to me.
+>     ⇒ Testing Strategy.
 >     ⇒ Research Cost analysis.
 > ---
 > ## Table of Contents
