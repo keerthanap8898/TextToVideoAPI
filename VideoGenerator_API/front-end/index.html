@@ -1,28 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <body style="font-family: system-ui; max-width: 720px; margin: 2rem auto;">
-    
-    <h1>Keerthana's Text→Video (MVP)</h1>
-    <h2>Demo Front-end (Not Live)</h2>
+  <body style="font-family: system-ui; margin:0;">
 
-    <h4>
-      See 
-      <a href="https://github.com/keerthanap8898/TextToVideoAPI#readme" target="_blank" rel="noopener noreferrer">
-        GitHub README
-      </a>
-    </h4>
+    <!-- Header -->
+    <header style="
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:1rem 2rem;
+      border-bottom:1px solid #e5e5e5;
+      background:#fff;
+    ">
+      <div style="font-weight:600;">
+        Keerthana's Text→Video
+      </div>
 
-    <form id="f" style="margin-bottom:1rem">
-      <input 
-        name="prompt" 
-        placeholder="Describe your video [w.i.p - will not return anything yet ; TODO]" 
-        style="width:420px;padding:.5rem" 
-        required
+      <button 
+        style="
+          padding:.4rem 1rem;
+          border:1px solid #ccc;
+          background:#fff;
+          border-radius:6px;
+          cursor:pointer;
+        "
+        title="Sign in (Demo only)"
       >
-      <button style="padding:.5rem 1rem">Generate</button>
-    </form>
+        Sign In
+      </button>
+    </header>
 
-    <pre id="out" style="background:#f6f6f6;padding:1rem;border-radius:8px;height:300px;overflow:auto"></pre>
+    <!-- Main content -->
+    <main style="max-width:720px; margin:2rem auto; padding:0 1rem;">
+
+      <h1>Keerthana's Text→Video (MVP)</h1>
+      <h2>Demo Front-end (Not Live)</h2>
+
+      <h4>
+        See 
+        <a href="https://github.com/keerthanap8898/TextToVideoAPI#readme" target="_blank" rel="noopener noreferrer">
+          GitHub README
+        </a>
+      </h4>
+
+      <form id="f" style="margin-bottom:1rem">
+        <input 
+          name="prompt" 
+          id="promptInput"
+          placeholder="Describe your video [TODO]" 
+          style="width:420px;padding:.5rem" 
+          title="Will not return anything yet - w.i.p"
+          required
+        >
+
+        <div id="tip" style="
+          display:none;
+          font-size:0.9rem;
+          color:#555;
+          margin-top:4px;
+        ">
+          Will not return anything yet - w.i.p
+        </div>
+
+        <br><br>
+
+        <button 
+          style="padding:.5rem 1rem"
+          title="(Demo)"
+        >
+          Generate (demo)
+        </button>
+      </form>
+
+      <pre id="out" style="background:#f6f6f6;padding:1rem;border-radius:8px;height:300px;overflow:auto"></pre>
+
+    </main>
 
     <script>
       const out = document.getElementById('out');
@@ -49,6 +100,18 @@
           if (s.status === 'failed') clearInterval(t);
         }, 1500);
       };
+
+      // Tooltip behavior
+      const input = document.getElementById('promptInput');
+      const tip = document.getElementById('tip');
+
+      input.addEventListener('focus', () => {
+        tip.style.display = 'block';
+      });
+
+      input.addEventListener('blur', () => {
+        tip.style.display = 'none';
+      });
     </script>
 
   </body>
