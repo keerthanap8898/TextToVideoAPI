@@ -2,6 +2,8 @@
 
     CopyrightⒸ 2025  Keerthana Purushotham <keep.consult@proton.me>.
     Licensed under the GNU AGPL v3. See LICENSE for details.
+
+    Acknowledgment: The initial system goals were inspired by a public take-home prompt from the Voltage Park team (July 2025). This project is an independent, clean-room implementation.
 ---
 > ### *The research goal is to demonstrate that Rust-based hybrid systems can deliver safer and more scalable infrastructure than pure C++, Python, or other traditional designs typically used for HPC workloads involving predictive models, distributed nodes, unstructured data, and/or high-traffic networks.*
 > ## MVP & Open-source Design Document
