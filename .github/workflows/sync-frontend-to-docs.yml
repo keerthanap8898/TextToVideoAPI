@@ -1,0 +1,40 @@
+name: Sync front-end to docs
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'VideoGenerator_API/front-end/**'
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'  # avoid infinite loops
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync front-end to docs
+        run: |
+          mkdir -p docs
+          rm -rf docs/*
+          cp -R VideoGenerator_API/front-end/* docs/
+
+      - name: Commit and push changes (if any)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet docs; then
+            echo "No changes to docs; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs
+          git commit -m "Sync front-end to docs [skip ci]"
+          git push
