@@ -18,7 +18,7 @@
 >     ⇒ Testing Strategy.
 >     ⇒ Research Cost analysis.
 > ---
-> ## Table of Contents
+> ## Index :
 >    1. [Problem Statement](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#1-problem-statement-) 
 >    2. [Proposed Solution](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#2-proposed-solution-) 
 >    3. [Architecture & Components](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#3-architecture--components) 
@@ -39,7 +39,9 @@
    - **Pain Points**: Current GenAI tools are often single-instance, blocking, & lack scalable API endpoints. Customers require asynchronous, concurrent, multi-GPU processing to handle high request volumes.
    - **Urgency**: Demand for generative AI content is growing rapidly; this solution enables fast iteration & deployment.
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 2. Proposed Solution :
    ***Goal is to build an asynchronous text-to-video API using the Genmo Mochi-1 model hosted on an 8×H100 GPU Kubernetes worker node. The backend will handle job submission, tracking, & retrieval via JSON-based endpoints. A basic React-based frontend will allow prompt submission, status monitoring, & file downloads. The system will be deployed on Kubernetes (K8s) with GPU resource allocation, multi-replica redundancy, & horizontal scaling.***  
@@ -48,7 +50,9 @@
    - **Flow Diagram for the system design:**  
      ![flowdiagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Flowchart.png)
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 3. Architecture & Components
   - **Core services**
@@ -68,7 +72,9 @@
   - **Block Diagram:**  
     - ![Block Diagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/BlockDiagram.png)
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 4. Success Metrics (The How does one know it worked?)
    
@@ -80,7 +86,9 @@
       - ≥99.9% availability; P95 ≤6 min / P99 ≤10 min  
       - GPU utilization 70–90%; retries <1%; 0 critical CVEs
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 5. Research Planning: GPU Cost & Orchestration Analysis
   - The 120-day plan combines **bar costs (best/avg/worst)** with a **parrot-green 5-day rolling mean GPU-hrs/day**. Phase boundaries are shaded softly up to \$15,000.
@@ -98,7 +106,10 @@
        - Includes 5-day rolling mean GPU usage line.  
        - Highlights phase peaks at correctness-heavy workloads (Multi-GPU support, Fault Tolerance, Load Testing).  
   ```
----
+
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 6. Open Questions and Assumptions
 
@@ -156,7 +167,9 @@
     - Any constraints on video length/quality &/or time limits from stakeholders?
     - Complex multi-part prompts requiring state management, explicit network hardening (over sandboxing) plus encryption.
   ```
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 7. Feature Prioritization and Risk Analysis
   **Table mapping **minimal correctness-critical features** vs optional research ones.**
@@ -170,94 +183,130 @@
       Tier 3 (Low):
         - UI/UX, API versioning, access control, prompt validation.
       ``` 
----
+
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
      
 ## 8. Testing Strategy
   ***The system is designed for reliability & correctness under diverse workloads. Model nondeterminism vs “golden” tests; flaky performance from noisy neighbors. Since text-to-video generation involves GPU scheduling, multi-process execution, & distributed infra, the testing layers span both functional & non-functional validation.***  
 Hence, my testing methodology includes:
 
-**`8.A. Core Functional Testing` :**
+### **`8.A. Core Functional Testing` :**
     
-  a. **Model Nondeterminism vs “Golden” Tests**:
-    - ***Meant to detect flaky performance caused by noisy neighbors in shared GPU environments.***
-    - *Manage drift in generated outputs. Golden baselines should be reproducible within a tolerance margin.* 
-    - **Category:** *Pre-release* & *Nightly regression*
+  ### a. ***Model Nondeterminism vs “Golden” Tests***:
+  ```
+    - Meant to detect flaky performance caused by noisy neighbors in shared GPU environments.
+    - Manage drift in generated outputs. Golden baselines should be reproducible within a tolerance margin.
+    - Category: Pre-release & Nightly regression.
+  ```
         
-  b. **Validation**:  
-    - ***Check if things are right under expected inputs & conditions.*** 
-    - **Category:** *Pre-release*
+  ### b. ***Validation***:  
+  ```
+    - Check if things are right under expected inputs & conditions. 
+    - Category: Pre-release
+  ```
         
-  c. **Sanity**:  
-    - ***Ensure wrong or impossible things can’t happen (bad configs, invalid data).***  
-    - **Category:** *Pre-release* & *CI/CD blocking*
+  ### c. ***Sanity***:  
+  ```
+    - Ensure wrong or impossible things can’t happen (bad configs, invalid data).  
+    - Category: Pre-release & CI/CD blocking
+  ```
         
-  d. **Unit**:  
-    - ***Cover as many test cases as possible, including edge cases, corner cases, & outlier scenarios.***  
-    - **Category:** *Pre-release* & *Continuous integration*
+  ### d. ***Unit***:  
+  ```
+    - Cover as many test cases as possible, including edge cases, corner cases, & outlier scenarios.  
+    - Category: Pre-release & Continuous integration
+  ```
         
-  e. **Integration**:  
-    - ***Verify cross-tool & cross-module workflows behave correctly.***  
-    - *(e.g., pre-processing → model inference → post-processing → storage).*  
-    - **Category:** *Pre-release* & *Continuous integration*
-       
-  f. **Regression**:  
-    - ***Ensure that new changes don’t break existing functionality or previously fixed bugs.***  
-    - **Category:** *Pre-release* & *Nightly regression*
+  ### e. ***Integration***:  
+  ```
+    - Verify cross-tool & cross-module workflows behave correctly.  
+    - (e.g., pre-processing → model inference → post-processing → storage).  
+    - Category: Pre-release & Continuous integration
+  ```
+        
+  ### f. ***Regression***:  
+  ```
+    - Ensure that new changes don’t break existing functionality or previously fixed bugs.  
+    - Category: Pre-release & Nightly regression
+  ```
 
-  **`8.B. Advanced / Non-Functional Testing` :**
+ ### **`8.B. Advanced / Non-Functional Testing` :**
   
-  a. **Load Testing**:  
-    - ***Simulate heavy usage across multiple GPUs/nodes; measure throughput, latency, & memory pressure at scale.***  
-    - **Category:** *Pre-release* for capacity planning; *Canary* for production safety  
+  ### a. ***Load Testing***:  
+  ```
+    - Simulate heavy usage across multiple GPUs/nodes; measure throughput, latency, & memory pressure at scale.  
+    - Category: Pre-release for capacity planning; Canary for production safety  
+  ```
         
-  b. **Stress Testing**:  
-    - ***Push system beyond expected limits (e.g., GPU memory exhaustion, burst API calls, long video generations) to observe controlled failures & recovery.***  
-    - **Category:** *Pre-release* only  
-      
-  c. **Chaos Testing**:  
-     - ***Inject faults (GPU preemption, node restarts, throttled APIs, network partitions) to validate resilience, correctness under disruption, & graceful degradation.***  
-     - **Category:** *Canary* (production experiments)  
+  ### b. ***Stress Testing***:  
+  ```
+    - Push system beyond expected limits (e.g., GPU memory exhaustion, burst API calls, long video generations) to observe controlled failures & recovery.  
+    - Category: Pre-release only  
+  ```
         
-  d. **Soak Testing**:  
-     - ***Run long-duration jobs to uncover resource leaks, GPU overheating issues, or slow degradation of performance/quality.***  
-     - **Category:** *Pre-release (staging clusters)*  
+  ### c. ***Chaos Testing***:  
+  ```
+     - Inject faults (GPU preemption, node restarts, throttled APIs, network partitions) to validate resilience, correctness under disruption, & graceful degradation.  
+     - Category: Canary (production experiments)  
+  ```
         
-  e. **Concurrency & Safety**:  
-     - ***Explicitly test multi-GPU scheduling, thread/process safety, & race-condition scenarios in distributed pipelines.***  
-     - **Category:** *Pre-release* & *CI/CD*  
+  ### d. ***Soak Testing***:  
+  ```
+     - Run long-duration jobs to uncover resource leaks, GPU overheating issues, or slow degradation of performance/quality.  
+     - Category: Pre-release (staging clusters)  
+  ```
+        
+  ### e. ***Concurrency & Safety***:  
+  ```
+     - Explicitly test multi-GPU scheduling, thread/process safety, & race-condition scenarios in distributed pipelines.  
+     - Category: Pre-release & CI/CD  
+  ```
 
-  **`8.C. Test Deployment Strategy` :**
+ ### **`8.C. Test Deployment Strategy` :**
   
-   a. **Pre-release (staging)**:  
+  ### a. ***Pre-release (staging)***:  
+  ```
         - Unit, validation, sanity, integration, regression, load, soak.  
-        - ***Goal***: *ensure correctness & performance before shipping.*  
+        - Goal: ensure correctness & performance before shipping.  
+  ```
         
-   b. **Continuous Integration (CI/CD)**:  
+  ### b. ***Continuous Integration (CI/CD)***:  
+  ```
         - Sanity, unit, integration, concurrency.  
         - Fast, automated feedback loop for every PR/merge.  
+  ```
         
-   c. **Nightly Regression**:  
+  ### c. ***Nightly Regression***:  
+  ```
         - Golden tests, regression, validation.  
         - Ensures long-term reproducibility & stability.  
+  ```
         
-   d. **Canary (production)**:  
+  ### d. ***Canary (production)***:  
+  ```
         - Chaos tests, partial-load tests.  
         - Safely run in production with a subset of traffic or limited GPU pool.  
-        - ***Goal***: *detect real-world issues without full rollout risk.*  
+        - Goal: detect real-world issues without full rollout risk.  
+  ```
 
-  **`8.D. Suggested Tools/Frameworks` :**
+  ### **`8.D. Suggested Tools/Frameworks` :**
   
-   a. **Unit/Regression/Integration** – `pytest`, `unittest`, `tox`, `pytest-benchmark`  
-   b. **Load/Stress** – `locust`, `wrk2`, `k6`, `gpu-burn` (CUDA stress testing)  
-   c. **Chaos** – `chaos-mesh`, `gremlin`, custom fault-injection scripts  
-   d. **Soak/Long-run** – Kubernetes cron-jobs, Prometheus metrics, Grafana dashboards  
-   e. **Concurrency** – `pytest-xdist`, `ray`, distributed pipeline simulators  
-   f. **CI/CD** – GitHub Actions, GitLab CI, Jenkins pipelines with GPU runners    
+   a. ***Unit/Regression/Integration*** – `pytest`, `unittest`, `tox`, `pytest-benchmark`  
+   b. ***Load/Stress*** – `locust`, `wrk2`, `k6`, `gpu-burn` (CUDA stress testing)  
+   c. ***Chaos*** – `chaos-mesh`, `gremlin`, custom fault-injection scripts  
+   d. ***Soak/Long-run*** – Kubernetes cron-jobs, Prometheus metrics, Grafana dashboards  
+   e. ***Concurrency*** – `pytest-xdist`, `ray`, distributed pipeline simulators  
+   f. ***CI/CD*** – GitHub Actions, GitLab CI, Jenkins pipelines with GPU runners    
 
   ```
    Together, this layered testing strategy ensures that the **Text-to-Video API** is correct, robust, fault-tolerant, & performant — validated before release, continuously monitored in CI/CD, & safely hardened in production via canaries.
   ```
----
+
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 9. Deployment & Operations:
 
@@ -286,7 +335,9 @@ Hence, my testing methodology includes:
       - c. [***slowapi | vendor reference doc link - PyPI - https://pypi.org/project/slowapi***](https://pypi.org/project/slowapi/)  
          - `slowapi`'s vendor has noted issues with no patches suggesting that the project may be well on its way into being deprecated upstream & is hence, a poor design choice by default.      
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 10. Corner Cases & Risk Control:
 
@@ -306,7 +357,9 @@ Hence, my testing methodology includes:
   5. **Kubernetes deployment Policies & Cluster-platform maintenance** → explicit rollout/canary strategies with health metrics gates  
      - with split-brain deploys across regions; partial rollbacks.  
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 11. Stakeholders & Next Steps:
 
@@ -331,7 +384,9 @@ Hence, my testing methodology includes:
   - **`GPU-Usage Gantt Chart`:**  
       ![Gantt-Chart](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Optimized%20GPU%20Gantt%20Chart%20with%20Usage%20Annotations%20and%20Stage-based%20Colors.png)
 
----
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
 
 ## 12. Appendix: team input – Vote & choose v1 release features for prod.
 
@@ -356,3 +411,7 @@ Hence, my testing methodology includes:
     
 o MVP Repo Tree Diagram - so far ...
   - ![MVP Repo Tree Diagram - so far ...](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/MVP_folder_tree.png)
+
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#index)
+
+---  
