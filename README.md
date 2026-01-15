@@ -40,7 +40,7 @@
    - **Pain Points**: Current GenAI tools are often single-instance, blocking, & lack scalable API endpoints. Customers require asynchronous, concurrent, multi-GPU processing to handle high request volumes.
    - **Urgency**: Demand for generative AI content is growing rapidly; this solution enables fast iteration & deployment.
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -51,7 +51,7 @@
    - **Flow Diagram for the system design:**  
      ![flowdiagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Flowchart.png)
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -73,7 +73,7 @@
   - **Block Diagram:**  
     - ![Block Diagram](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/BlockDiagram.png)
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -87,7 +87,7 @@
       - ≥99.9% availability; P95 ≤6 min / P99 ≤10 min  
       - GPU utilization 70–90%; retries <1%; 0 critical CVEs
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -108,7 +108,7 @@
        - Highlights phase peaks at correctness-heavy workloads (Multi-GPU support, Fault Tolerance, Load Testing).  
   ```
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -168,7 +168,7 @@
     - Any constraints on video length/quality &/or time limits from stakeholders?
     - Complex multi-part prompts requiring state management, explicit network hardening (over sandboxing) plus encryption.
   ```
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -185,7 +185,7 @@
         - UI/UX, API versioning, access control, prompt validation.
       ``` 
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
      
@@ -305,7 +305,7 @@ Hence, my testing methodology includes:
    Together, this layered testing strategy ensures that the **Text-to-Video API** is correct, robust, fault-tolerant, & performant — validated before release, continuously monitored in CI/CD, & safely hardened in production via canaries.
   ```
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -336,7 +336,7 @@ Hence, my testing methodology includes:
       - c. [***slowapi | vendor reference doc link - PyPI - https://pypi.org/project/slowapi***](https://pypi.org/project/slowapi/)  
          - `slowapi`'s vendor has noted issues with no patches suggesting that the project may be well on its way into being deprecated upstream & is hence, a poor design choice by default.      
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -358,7 +358,7 @@ Hence, my testing methodology includes:
   5. **Kubernetes deployment Policies & Cluster-platform maintenance** → explicit rollout/canary strategies with health metrics gates  
      - with split-brain deploys across regions; partial rollbacks.  
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -385,7 +385,7 @@ Hence, my testing methodology includes:
   - **`GPU-Usage Gantt Chart`:**  
       ![Gantt-Chart](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/Optimized%20GPU%20Gantt%20Chart%20with%20Usage%20Annotations%20and%20Stage-based%20Colors.png)
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
 
@@ -413,6 +413,6 @@ Hence, my testing methodology includes:
 o MVP Repo Tree Diagram - so far ...
   - ![MVP Repo Tree Diagram - so far ...](https://github.com/keerthanap8898/TextToVideoAPI/blob/main/Resources/Other/Images/MVP_folder_tree.png)
 
-[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI#contents-)
+[*`back to index`*](https://github.com/keerthanap8898/TextToVideoAPI?tab=readme-ov-file#contents-)
 
 ---  
